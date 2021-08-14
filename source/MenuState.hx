@@ -18,6 +18,9 @@ class MenuState extends FlxState
 	var specialButton:FlxButton;
 	var settingsButton:FlxButton;
 
+	var versionText:FlxText;
+	var infoText:FlxText;
+
 	#if desktop
 	var exitButton:FlxButton;
 	#end
@@ -32,11 +35,16 @@ class MenuState extends FlxState
 		final background = new Background(0, 0);
 		add(background);
 
-		final title = new Title(50, 50);
+		final title = new Title(280, 100);
 		add(title);
 
-		final jnh = new JakeNevesHaxe(220, 200);
-		add(jnh);
+		versionText = new FlxText(0, 560, 0, "v0.00", 18);
+		versionText.setFormat("Consolas", 18, FlxColor.WHITE);
+		add(versionText);
+
+		infoText = new FlxText(0, 580, 0, "2021 Jake Neves" + "\nDo Not Distribute", 18);
+		infoText.setFormat("Consolas", 18, FlxColor.WHITE);
+		add(infoText);
 
 		// Testing Button
 		// fartButton = new FlxButton(0, 0, "Fart");
@@ -45,42 +53,48 @@ class MenuState extends FlxState
 		// fartButton.y = FlxG.height - fartButton.height - 10;
 		// add(fartButton);
 
-		playButton = new FlxButton(0, 0, "Start", clickPlay);
-		playButton.loadGraphic(AssetPaths.buttonmedium__png, true, 60, 20);
+		playButton = new FlxButton(0, 0, "Venture Forth", clickPlay);
+		playButton.loadGraphic(AssetPaths.buttonlarge__png, true, 120, 20);
 		playButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
 		playButton.x = FlxG.width - 120 - playButton.width;
-		playButton.y = FlxG.height - playButton.height - 100;
+		playButton.y = FlxG.height - playButton.height - 400;
 		playButton.screenCenter(FlxAxes.X);
 		add(playButton);
 
-		specialButton = new FlxButton(0, 0, "Specials");
-		specialButton.loadGraphic(AssetPaths.buttonmedium__png, true, 60, 20);
+		specialButton = new FlxButton(0, 0, "Specials Features");
+		specialButton.loadGraphic(AssetPaths.buttonlarge__png, true, 120, 20);
 		specialButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
 		specialButton.x = FlxG.width - 120 - specialButton.width;
-		specialButton.y = FlxG.height - specialButton.height - 75;
+		specialButton.y = FlxG.height - specialButton.height - 375;
 		specialButton.screenCenter(FlxAxes.X);
 		add(specialButton);
 
 		settingsButton = new FlxButton(0, 0, "Settings", clickSettings);
-		settingsButton.loadGraphic(AssetPaths.buttonmedium__png, true, 60, 20);
+		settingsButton.loadGraphic(AssetPaths.buttonlarge__png, true, 120, 20);
 		settingsButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
 		settingsButton.x = FlxG.width - 120 - settingsButton.width;
-		settingsButton.y = FlxG.height - settingsButton.height - 50;
+		settingsButton.y = FlxG.height - settingsButton.height - 350;
 		settingsButton.screenCenter(FlxAxes.X);
 		add(settingsButton);
 
 		#if desktop
-		settingsButton = new FlxButton(FlxG.width - 28, 8, "x");
-		settingsButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
-		settingsButton.x = FlxG.width - 120 - settingsButton.width;
-		settingsButton.y = FlxG.height - settingsButton.height - 25;
-		add(settingsButton);
+		exitButton = new FlxButton(780, 0, "", clickExit);
+		exitButton.loadGraphic(AssetPaths.buttonExit__png, true, 20, 20);
+		exitButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
+		add(exitButton);
 		#end
 
 		FlxG.camera.fade(FlxColor.WHITE, 0.32, true);
 
 		super.create();
 	}
+
+	#if desktop
+	function clickExit()
+	{
+		Sys.exit(0);
+	}
+	#end
 
 	function clickSettings()
 	{
@@ -98,11 +112,4 @@ class MenuState extends FlxState
 			FlxG.switchState(new PlayState());
 		});
 	}
-
-	#if desktop
-	function clickExit()
-	{
-		Sys.exit(0);
-	}
-	#end
 }

@@ -23,6 +23,7 @@ class SettingsState extends FlxState
 	var volUpButton:FlxButton;
 	var volDownButton:FlxButton;
 
+	// var fullscreenButton:FlxButton;
 	var volumeBar:FlxBar;
 
 	override public function create():Void
@@ -31,6 +32,7 @@ class SettingsState extends FlxState
 		add(background);
 
 		title = new FlxText(0, 20, 0, "Settings", 22);
+		title.setFormat("Arial", 32, FlxColor.WHITE);
 		title.alignment = CENTER;
 		title.screenCenter(FlxAxes.X);
 		add(title);
@@ -70,6 +72,12 @@ class SettingsState extends FlxState
 		backButton.y = FlxG.height - backButton.height - 10;
 		add(backButton);
 
+		// #if desktop
+		// fullscreenButton = new FlxButton(0, volumeBar.y + volumeBar.height + 8, FlxG.fullscreen ? "Fullscreen" : "Windowed", clickFullscreen);
+		// fullscreenButton.screenCenter(FlxAxes.X);
+		// add(fullscreenButton);
+		// #end
+
 		formatButton = new FlxButton(0, 0, "Format", clickFormat);
 		formatButton.loadGraphic(AssetPaths.buttonmedium__png, true, 60, 20);
 		formatButton.onUp.sound = FlxG.sound.load(AssetPaths.dataFormat__wav);
@@ -85,6 +93,15 @@ class SettingsState extends FlxState
 
 		super.create();
 	}
+
+	// #if desktop
+	// function clickFullscreen()
+	// {
+	//	FlxG.fullscreen = !FlxG.fullscreen;
+	//	fullscreenButton.text = FlxG.fullscreen ? "Fullscreen" : "Windowed";
+	//	save.data.fullscreen = FlxG.fullscreen;
+	// }
+	// #end
 
 	function clickBack()
 	{

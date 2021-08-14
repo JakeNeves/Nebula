@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.math.FlxPoint;
+import flixel.util.FlxColor;
 
 class Player extends FlxSprite
 {
@@ -15,12 +16,20 @@ class Player extends FlxSprite
 		loadGraphic(AssetPaths.jake__png, true, 16, 32);
 		// setFacingFlip(FlxObject.LEFT, false, true);
 		// setFacingFlip(FlxObject.RIGHT, true, false);
-		animation.add("up", [2, 0, 1, 0], 4, false);
-		animation.add("down", [5, 3, 4, 3], 4, false);
-		animation.add("left", [8, 6, 7, 6], 4, false);
-		animation.add("right", [11, 9, 10, 9], 4, false);
 
-		drag.x = drag.y = 1200;
+		// movement
+		animation.add("up", [2, 0, 1, 0], 8, false);
+		animation.add("down", [5, 3, 4, 3], 8, false);
+		animation.add("left", [8, 6, 7, 6], 8, false);
+		animation.add("right", [11, 9, 10, 9], 8, false);
+
+		// punching
+		animation.add("punchUp", [12, 0], 8, false);
+		animation.add("punchDown", [13, 3], 8, false);
+		animation.add("punchLeft", [14, 6], 8, false);
+		animation.add("punchRight", [15, 9], 8, false);
+
+		drag.x = drag.y = 300;
 		setSize(16, 32);
 		// offset.set(0, 0);
 	}
@@ -33,16 +42,26 @@ class Player extends FlxSprite
 
 	function updateMovement()
 	{
+		// movement
 		var up:Bool = false;
 		var down:Bool = false;
 		var left:Bool = false;
 		var right:Bool = false;
+
+		var esc:Bool = false;
+
+		// punching
+		var z:Bool = false;
 
 		#if FLX_KEYBOARD
 		up = FlxG.keys.anyPressed([UP, W]);
 		down = FlxG.keys.anyPressed([DOWN, S]);
 		left = FlxG.keys.anyPressed([LEFT, A]);
 		right = FlxG.keys.anyPressed([RIGHT, D]);
+
+		esc = FlxG.keys.anyPressed([ESCAPE]);
+
+		z = FlxG.keys.anyPressed([Z]);
 		#end
 
 		if (up && down)
@@ -98,6 +117,27 @@ class Player extends FlxSprite
 					case FlxObject.RIGHT:
 						animation.play("right");
 				}
+			}
+		}
+		else if (esc)
+		{
+			FlxG.camera.fade(FlxColor.WHITE, 0.05, false, function()
+			{
+				FlxG.switchState(new MenuState());
+			});
+		}
+		else if (z)
+		{
+			switch (facing)
+			{
+				case FlxObject.UP:
+					animation.play("punchUp");
+				case FlxObject.DOWN:
+					animation.play("punchDown");
+				case FlxObject.LEFT:
+					animation.play("punchLeft");
+				case FlxObject.RIGHT:
+					animation.play("punchRight");
 			}
 		}
 	}

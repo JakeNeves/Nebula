@@ -19,6 +19,8 @@ class PlayState extends FlxState
 		player = new Player(100, 100);
 		add(player);
 
+		FlxG.camera.follow(player, TOPDOWN, 1);
+
 		super.create();
 		// add(new FlxText("Test Room, Something funny here!", 32).screenCenter());
 	}
