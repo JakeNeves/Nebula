@@ -4,112 +4,91 @@ import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
-import flixel.util.FlxAxes;
 import flixel.util.FlxColor;
-import title.Background;
-import title.JakeNevesHaxe;
-import title.Title;
+import ui.OptionsBackground;
 
 class MenuState extends FlxState
 {
-	var title:FlxText;
-	// var fartButton:FlxButton;
-	var playButton:FlxButton;
-	var specialButton:FlxButton;
-	var settingsButton:FlxButton;
+	var backButton:FlxButton;
+	var runButton:FlxButton;
 
-	var versionText:FlxText;
-	var infoText:FlxText;
+	var menuText:FlxText;
+	var demoText:FlxText;
 
-	#if desktop
-	var exitButton:FlxButton;
-	#end
+	var characterSelect:FlxText;
 
-	override public function create()
+	var navigateLeft:Bool = false;
+	var navigateRight:Bool = false;
+
+	static public var character:String = 'jake';
+
+	function updateNavigation()
 	{
-		// title = new FlxText(0, 20, 0, "Nebula", 22);
-		// title.alignment = CENTER;
-		// title.screenCenter(FlxAxes.X);
-		// add(title);
+		#if FLX_KEYBOARD
+		navigateLeft = FlxG.keys.anyPressed([LEFT, A]);
+		navigateLeft = FlxG.keys.anyPressed([RIGHT, D]);
+		#end
 
-		final background = new Background(0, 0);
+		if (navigateLeft || navigateRight)
+		{
+			if (navigateLeft) {}
+			else if (navigateRight) {}
+		}
+	}
+
+	override public function create():Void
+	{
+		characterSelect = new FlxText(60, 120, "Select Character" + "\n< " + character + " >", 16);
+		characterSelect.setFormat(Assets.getFont("vgaoem.fon"), 16);
+
+		menuText = new FlxText(0, 560, 0, "Main Menu", 18);
+		menuText.setFormat("Consolas", 18, FlxColor.BLACK);
+		add(menuText);
+
+		demoText = new FlxText(0, 580, 0, "Tech Demo, Available to public for testing...", 18);
+		demoText.setFormat("Consolas", 18, FlxColor.BLACK);
+		add(demoText);
+
+		final background = new OptionsBackground(0, 0);
 		add(background);
 
-		final title = new Title(280, 100);
-		add(title);
+		backButton = new FlxButton(10, 30, "", clickBack);
+		backButton.loadGraphic(Assets.buttonBack__png, true, 20, 20);
+		backButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		add(backButton);
 
-		versionText = new FlxText(0, 560, 0, "v0.00", 18);
-		versionText.setFormat("Consolas", 18, FlxColor.WHITE);
-		add(versionText);
-
-		infoText = new FlxText(0, 580, 0, "2021 Jake Neves" + "\nDo Not Distribute", 18);
-		infoText.setFormat("Consolas", 18, FlxColor.WHITE);
-		add(infoText);
-
-		// Testing Button
-		// fartButton = new FlxButton(0, 0, "Fart");
-		// fartButton.onUp.sound = FlxG.sound.load(AssetPaths.fard__wav);
-		// fartButton.x = (FlxG.width / 2) - 10 - fartButton.width;
-		// fartButton.y = FlxG.height - fartButton.height - 10;
-		// add(fartButton);
-
-		playButton = new FlxButton(0, 0, "Venture Forth", clickPlay);
-		playButton.loadGraphic(AssetPaths.buttonlarge__png, true, 120, 20);
-		playButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
-		playButton.x = FlxG.width - 120 - playButton.width;
-		playButton.y = FlxG.height - playButton.height - 400;
-		playButton.screenCenter(FlxAxes.X);
-		add(playButton);
-
-		specialButton = new FlxButton(0, 0, "Specials Features");
-		specialButton.loadGraphic(AssetPaths.buttonlarge__png, true, 120, 20);
-		specialButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
-		specialButton.x = FlxG.width - 120 - specialButton.width;
-		specialButton.y = FlxG.height - specialButton.height - 375;
-		specialButton.screenCenter(FlxAxes.X);
-		add(specialButton);
-
-		settingsButton = new FlxButton(0, 0, "Settings", clickSettings);
-		settingsButton.loadGraphic(AssetPaths.buttonlarge__png, true, 120, 20);
-		settingsButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
-		settingsButton.x = FlxG.width - 120 - settingsButton.width;
-		settingsButton.y = FlxG.height - settingsButton.height - 350;
-		settingsButton.screenCenter(FlxAxes.X);
-		add(settingsButton);
-
-		#if desktop
-		exitButton = new FlxButton(780, 0, "", clickExit);
-		exitButton.loadGraphic(AssetPaths.buttonExit__png, true, 20, 20);
-		exitButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
-		add(exitButton);
-		#end
+		runButton = new FlxButton(0, 30, "New Run", startGame);
+		runButton.loadGraphic(Assets.buttonmedium__png, true, 60, 20);
+		runButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		runButton.x = (FlxG.width / 2) - 10 - backButton.width;
+		add(runButton);
 
 		FlxG.camera.fade(FlxColor.WHITE, 0.32, true);
 
 		super.create();
 	}
 
-	#if desktop
-	function clickExit()
-	{
-		Sys.exit(0);
-	}
-	#end
-
-	function clickSettings()
+	function clickBack()
 	{
 		FlxG.camera.fade(FlxColor.WHITE, 0.05, false, function()
 		{
-			FlxG.switchState(new SettingsState());
+			FlxG.switchState(new TitleState());
 		});
 	}
 
-	function clickPlay()
+	function startGame()
 	{
-		FlxG.camera.fade(FlxColor.WHITE, 0.05, false, function()
+		FlxG.camera.fade(FlxColor.WHITE, 0.05, true, function()
 		{
-			FlxG.camera.fade(FlxColor.BLACK, 0.32, false);
 			FlxG.switchState(new PlayState());
 		});
+		if (character == null)
+		{
+			trace('No character found, please refer to either the code or the character\'s files!');
+		}
+		else
+		{
+			trace('Starting game with selected character: ' + MenuState.character + '!');
+		}
 	}
 }

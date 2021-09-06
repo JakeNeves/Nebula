@@ -16,12 +16,12 @@ class SettingsState extends FlxState
 	var volText:FlxText;
 	var volAmountText:FlxText;
 
-	var save:FlxSave;
-
 	var backButton:FlxButton;
 	var formatButton:FlxButton;
 	var volUpButton:FlxButton;
 	var volDownButton:FlxButton;
+
+	var save:FlxSave;
 
 	// var fullscreenButton:FlxButton;
 	var volumeBar:FlxBar;
@@ -43,13 +43,13 @@ class SettingsState extends FlxState
 		add(volText);
 
 		volDownButton = new FlxButton(8, volText.y + volText.height + 2, "-", clickVolDown);
-		volDownButton.loadGraphic(AssetPaths.button__png, true, 20, 20);
-		volDownButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
+		volDownButton.loadGraphic(Assets.button__png, true, 20, 20);
+		volDownButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
 		add(volDownButton);
 
 		volUpButton = new FlxButton(FlxG.width - 28, volDownButton.y, "+", clickVolUp);
-		volUpButton.loadGraphic(AssetPaths.button__png, true, 20, 20);
-		volUpButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
+		volUpButton.loadGraphic(Assets.button__png, true, 20, 20);
+		volUpButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
 		add(volUpButton);
 
 		volumeBar = new FlxBar(volDownButton.x + volDownButton.width + 4, volDownButton.y, LEFT_TO_RIGHT, Std.int(FlxG.width - 64),
@@ -66,8 +66,8 @@ class SettingsState extends FlxState
 		add(volAmountText);
 
 		backButton = new FlxButton(0, 0, "Back", clickBack);
-		backButton.loadGraphic(AssetPaths.buttonmedium__png, true, 60, 20);
-		backButton.onUp.sound = FlxG.sound.load(AssetPaths.click__wav);
+		backButton.loadGraphic(Assets.buttonmedium__png, true, 60, 20);
+		backButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
 		backButton.x = (FlxG.width / 2) - 10 - backButton.width;
 		backButton.y = FlxG.height - backButton.height - 10;
 		add(backButton);
@@ -79,17 +79,17 @@ class SettingsState extends FlxState
 		// #end
 
 		formatButton = new FlxButton(0, 0, "Format", clickFormat);
-		formatButton.loadGraphic(AssetPaths.buttonmedium__png, true, 60, 20);
-		formatButton.onUp.sound = FlxG.sound.load(AssetPaths.dataFormat__wav);
+		formatButton.loadGraphic(Assets.buttonmedium__png, true, 60, 20);
+		formatButton.onUp.sound = FlxG.sound.load(Assets.dataFormat__wav);
 		formatButton.x = FlxG.width - 120 - formatButton.width;
 		formatButton.y = FlxG.height - formatButton.height - 100;
 		formatButton.screenCenter(FlxAxes.X);
 		add(formatButton);
 
-		save = new FlxSave();
-		save.bind("NebulaRunData");
-
 		FlxG.camera.fade(FlxColor.WHITE, 0.32, true);
+
+		save = new FlxSave();
+		save.bind('nebula', 'tetrasoft');
 
 		super.create();
 	}
@@ -108,7 +108,7 @@ class SettingsState extends FlxState
 		save.close();
 		FlxG.camera.fade(FlxColor.WHITE, 0.05, false, function()
 		{
-			FlxG.switchState(new MenuState());
+			FlxG.switchState(new TitleState());
 		});
 	}
 
@@ -128,14 +128,14 @@ class SettingsState extends FlxState
 	function clickVolDown()
 	{
 		FlxG.sound.volume -= 0.1;
-		save.data.volume = FlxG.sound.volume;
+		Cache.save.data.volume = FlxG.sound.volume;
 		updateVolume();
 	}
 
 	function clickVolUp()
 	{
 		FlxG.sound.volume += 0.1;
-		save.data.volume = FlxG.sound.volume;
+		Cache.save.data.volume = FlxG.sound.volume;
 		updateVolume();
 	}
 }

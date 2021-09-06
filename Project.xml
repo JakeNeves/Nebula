@@ -4,7 +4,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Nebula" file="nebula-game" main="Main" version="0.00" company="Tetrasoft" />
+	<app title="Nebula" file="nebula" packageName="com.tetrasoft.nebula" main="Main" version="0.02" company="Tetrasoft" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -41,7 +41,7 @@
 	<haxelib name="flixel-addons" />
 
 	<!--In case you want to use the ui package-->
-	<!--<haxelib name="flixel-ui" />-->
+	<haxelib name="flixel-ui" />
 
 	<!--In case you want to use nape with flixel-->
 	<!--<haxelib name="nape-haxe4" />-->
@@ -81,4 +81,10 @@
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
+
+	<icon path="assets/images/icon16.png" size="16" />
+	<icon path="assets/images/icon32.png" size="32" />
+	<icon path="assets/images/icon64.png" size="64" />
+	<icon path="assets/images/iconWindows.png" />
+
 </project>

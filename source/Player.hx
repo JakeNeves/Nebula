@@ -13,21 +13,42 @@ class Player extends FlxSprite
 	public function new(x:Float = 0, y:Float = 0)
 	{
 		super(x, y);
-		loadGraphic(AssetPaths.jake__png, true, 16, 32);
+
+		switch (MenuState.character)
+		{
+			case 'blocky':
+				// testing changeable characters
+				loadGraphic(Assets.blocky__png, true, 16, 32);
+
+				// movement
+				animation.add("up", [2, 0, 1, 0], 8, false);
+				animation.add("down", [5, 3, 4, 3], 8, false);
+				animation.add("left", [8, 6, 7, 6], 8, false);
+				animation.add("right", [11, 9, 10, 9], 8, false);
+
+				// punching
+				animation.add("punchUp", [12, 0], 8, false);
+				animation.add("punchDown", [13, 3], 8, false);
+				animation.add("punchLeft", [14, 6], 8, false);
+				animation.add("punchRight", [15, 9], 8, false);
+			default:
+				loadGraphic(Assets.jake__png, true, 16, 32);
+
+				// movement
+				animation.add("up", [2, 0, 1, 0], 8, false);
+				animation.add("down", [5, 3, 4, 3], 8, false);
+				animation.add("left", [8, 6, 7, 6], 8, false);
+				animation.add("right", [11, 9, 10, 9], 8, false);
+
+				// punching
+				animation.add("punchUp", [12, 0], 8, false);
+				animation.add("punchDown", [13, 3], 8, false);
+				animation.add("punchLeft", [14, 6], 8, false);
+				animation.add("punchRight", [15, 9], 8, false);
+		}
+
 		// setFacingFlip(FlxObject.LEFT, false, true);
 		// setFacingFlip(FlxObject.RIGHT, true, false);
-
-		// movement
-		animation.add("up", [2, 0, 1, 0], 8, false);
-		animation.add("down", [5, 3, 4, 3], 8, false);
-		animation.add("left", [8, 6, 7, 6], 8, false);
-		animation.add("right", [11, 9, 10, 9], 8, false);
-
-		// punching
-		animation.add("punchUp", [12, 0], 8, false);
-		animation.add("punchDown", [13, 3], 8, false);
-		animation.add("punchLeft", [14, 6], 8, false);
-		animation.add("punchRight", [15, 9], 8, false);
 
 		drag.x = drag.y = 300;
 		setSize(16, 32);

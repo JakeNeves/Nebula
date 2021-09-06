@@ -11,9 +11,9 @@
 
 * [The game](#chapter-1)
 
-* [How can I build the game](#chapter-2)
+* [The Dependencies](#chapter-2)
 
-* [The Dependencies](#chapter-3)
+* [Compiling and Running the game](#chapter-3)
 
 * [Credits](#chapter-4)
 
@@ -33,10 +33,12 @@
 
 # Chapter-2
 
-## How can I build the game?
+## The Dependencies
  1. Install the following...
 
-    1. [Haxe](https://haxe.org) (4.2.3 or newer)
+----
+
+    1. [Haxe](https://haxe.org/download) 4.2.3 or newer (latest version is recommended)
     2. [Git](https://git-scm.com/downloads)
  
         FOR LINUX USERS:
@@ -49,17 +51,28 @@
 
  2. Clone This Repository
 
+----
+
         git clone https://github.com/JakeNeves/Nebula
 
     **Note to Keep in mind**
 
     Make sure you are in the directory you are cloning this into.
 
+ 3. Since you have installed [Haxe](https://haxe.org) now, you sould run the following commands
 
+----
 
- 3. There will be a file called 'compileandrun.bat', double click on the file Otherwise you can open Windows Power Shell or Command Prompt and type in the following
-    
-        lime test windows
+    **Note to Keep in mind**
+
+    On windows, open up Command Propmt or Power Shell.
+
+        haxelib install lime
+        haxelib run lime setup
+        haxelib install flixel
+        haxelib install flixel-addons
+        haxelib install flixel-ui
+        haxelib install flixel-tools
 
 **Note to keep in mind**
 
@@ -67,15 +80,14 @@ Nebula is only available on PC/Mac, if you want to build a Flash/HTML5 port, you
 
 # Chapter-3
 
-## The Dependencies
-Since you have installed [Haxe](https://haxe.org) now, you sould run the following commands
+## Compiling and Running the Game
 
-    haxelib install lime
-    haxelib install flixel
-    haxelib install hxcpp
+ There will be a file called 'compileandrun.bat', double click on the file Otherwise you can open Windows Power Shell or Command Prompt and type in the following
+    
+        lime test windows
 
 # Chapter-4
 
 ## Credits
 
- - [Jake Neves](https://www.youtube.com/channel/UCaPYj8aYX30iDGOP7B9HUIQ) - Programming and Everything Else
+ - [Jake "JakeTEM" Neves](https://www.youtube.com/channel/UCaPYj8aYX30iDGOP7B9HUIQ) - Programming and Everything Else

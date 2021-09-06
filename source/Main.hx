@@ -2,56 +2,94 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxGame;
+import flixel.FlxState;
 import flixel.util.FlxColor;
 import flixel.util.FlxSave;
+import openfl.Lib;
 import openfl.display.FPS;
 import openfl.display.Sprite;
 
 class Main extends Sprite
 {
-	var framerate:Int = 250;
+	var winX:Int = 800;
+	var winY:Int = 600;
+	var framerate:Int = 260;
+
+	var winZoom:Float = -1;
+
+	var skipSplash:Bool = true;
+	var startFullscreen:Bool = false;
+
+	var save:FlxSave = new FlxSave();
+
+	var initState:Class<FlxState> = TitleState;
+
+	public static function main():Void
+	{
+		Lib.current.addChild(new Main());
+	}
 
 	public function new()
 	{
-		// var startFullscreen:Bool = false;
-		var save:FlxSave = new FlxSave();
-
-		// #if desktop
-		// if (save.data.fullscreen != null)
-		// {
-		//	startFullscreen = save.data.fullscreen;
-		// }
-		// #end
-
-		// framerate = 60;
-
-		// fpsCounter = new FPS(10, 3, 0xFFFFFF);
-		// addChild(fpsCounter);
-		// toggleFPS(FlxG.save.data.fps);
+		#if fesktop
+		if (save.data.fullscreen != null)
+		{
+			startFullscreen = save.data.fullscreen;
+		}
+		#end
 
 		super();
-		addChild(new FlxGame(800, 600, MenuState, 1, 60, 60, false));
+		addChild(new FlxGame(800, 600, TitleState, 1, 60, 60, false));
+
+		if (save.data.volume != null)
+		{
+			FlxG.sound.volume = save.data.volume;
+		}
+		save.close();
 	}
 
-	// var fpsCounter:FPS;
-	// public function toggleFPS(fpsEnabled:Bool):Void
-	// {
-	//	fpsCounter.visible = fpsEnabled;
-	// }
-	// public function setFPSCap(cap:Float)
-	// {
-	//	openfl.Lib.current.stage.frameRate = cap;
-	// }
-	// public function getFPSCap():Float
-	// {
-	//	return openfl.Lib.current.stage.frameRate;
-	// }
-	// public function changeFPSColor(color:FlxColor)
-	// {
-	//	fpsCounter.textColor = color;
-	// }
-	// public function getFPS():Float
-	// {
-	//	return fpsCounter.currentFPS;
-	// }
+	private function setup()
+	{
+		if (winZoom == -1) {}
+
+		#if !cpp
+		framerate = 260;
+		#end
+
+		#if cpp
+		initState = Cache;
+		game = new FlxGame(winX, winY, initState, winZoom, framerate, framerate, skipSplash, startFullscreen);
+		#else
+		game = new FlxGame(winX, winY, initState, winZoom, framerate, framerate, skipSplash, startFullscreen);
+		#end
+	}
+
+	var game:FlxGame;
+
+	var fpsCounter:FPS;
+
+	public function toggleFPS():Void
+	{
+		fpsCounter.visible = true;
+	}
+
+	public function changeFPSColor(color:FlxColor)
+	{
+		fpsCounter.textColor = FlxColor.WHITE;
+	}
+
+	public function setFrameCap(cap:Float)
+	{
+		openfl.Lib.current.stage.frameRate = cap;
+	}
+
+	public function getFrameCap():Float
+	{
+		return openfl.Lib.current.stage.frameRate;
+	}
+
+	public function getFramerate():Float
+	{
+		return fpsCounter.currentFPS;
+	}
 }
