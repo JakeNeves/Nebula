@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with my Hands -->
+<!-- aaaaaaaaaaaaaaaaaaaaa -->
+<TextureAtlas>
+    <SubTexture name="Combo10000" x="0" y="0" width="28" height="11"/>
+    <SubTexture name="Combo10001" x="31" y="0" width="35" height="11"/>
+    <SubTexture name="Combo10002" x="0" y="14" width="75" height="11"/>
+    <SubTexture name="Combo10003" x="0" y="28" width="45" height="11"/>
+    <SubTexture name="Combo10004" x="48" y="28" width="36" height="11"/>
+    <SubTexture name="Combo10005" x="0" y="42" width="46" height="11"/>
+</TextureAtlas>

@@ -1,11 +1,10 @@
-package ui;
+package util;
 
 import flixel.FlxBasic;
 import flixel.FlxG;
 import flixel.addons.ui.FlxUIState;
 import flixel.util.FlxColor;
 import openfl.Lib;
-import util.TimeScructureUtils;
 
 // dummy class, cuz am dumbass
 class NebulaGeneralState extends FlxUIState
@@ -19,5 +18,18 @@ class NebulaGeneralState extends FlxUIState
 			trace('region ' + transIn.region);
 
 		super.create();
+	}
+
+	/**
+	 * Allows you to open any URL while the game is running
+	 * @param url the URL that it will open
+	 */
+	static public function openHyperlink(url:String)
+	{
+		#if linux
+		Sys.command('/usr/bin/xdg-open', [url, '&']);
+		#else
+		FlxG.openURL(url);
+		#end
 	}
 }

@@ -9,6 +9,8 @@ class PlayerSettings
 	static public var playerCount(default, null) = 0;
 	static public var player(default, null):PlayerSettings;
 
+	static public var antialiasing:Bool = false;
+
 	function new(id, scheme)
 	{
 		//	this.id = id;

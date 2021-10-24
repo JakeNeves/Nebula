@@ -4,7 +4,7 @@ import lime.utils.Assets;
 
 using StringTools;
 
-class SplashUtils
+class TextUtils
 {
 	public static var difficulty:Array<String> = ['easy', 'medium', 'hard', 'insane', 'extreme'];
 

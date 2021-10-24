@@ -1,71 +1,109 @@
 package;
 
 import flixel.FlxG;
+import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
-import ui.OptionsBackground;
 
 class MenuState extends FlxState
 {
 	var backButton:FlxButton;
 	var runButton:FlxButton;
 
-	var menuText:FlxText;
-	var demoText:FlxText;
-
-	var characterSelect:FlxText;
-
-	var navigateLeft:Bool = false;
-	var navigateRight:Bool = false;
-
+	/**
+	 * The Character's Given ID.
+	 */
 	static public var character:String = 'jake';
 
-	function updateNavigation()
-	{
-		#if FLX_KEYBOARD
-		navigateLeft = FlxG.keys.anyPressed([LEFT, A]);
-		navigateLeft = FlxG.keys.anyPressed([RIGHT, D]);
-		#end
+	/**
+	 * The Character's Numerical ID.
+	 */
+	static public var characterNumericalID:Int = 1;
 
-		if (navigateLeft || navigateRight)
+	/**
+	 * Character Navigation, use the A and D or the Left and Right keys
+	 * switch between characters, this is a work-in-progress right now!
+	 */
+	function updateCharacterNavigation()
+	{
+		var navigateLeft:Bool = false;
+		var navigateRight:Bool = false;
+
+		#if FLX_KEYBOARD
+		navigateLeft = FlxG.keys.anyJustPressed([LEFT, A]);
+		navigateRight = FlxG.keys.anyJustPressed([RIGHT, D]);
+		#end
+		if (navigateLeft)
 		{
-			if (navigateLeft) {}
-			else if (navigateRight) {}
+			characterNumericalID -= 1;
+			// trace('Switched character to ' + character + '!' + '\nCharacter\'s Numerical ID is ' + characterNumericalID + '...');
 		}
+		else if (navigateRight)
+		{
+			characterNumericalID += 1;
+			// trace('Switched character to ' + character + '!' + '\nCharacter\'s Numerical ID is ' + characterNumericalID + '...');
+		}
+		// Since -1 is 'out of range', we will set the ID to 0 and the character to 'jake'. Do not Use negative integers!
+		if (characterNumericalID <= -1)
+		{
+			characterNumericalID += 1;
+			// trace('Character\'s Numerical ID is out of range!');
+		}
+		/**
+		 *	When you add a character, it's given the ID you register your character as
+		 *	each character is assigned a numerical ID for when you change character in
+		 *	the menu, the game will read the numerical ID rather than the given name!
+		 */
+		// switch (MenuState.characterNumericalID)
+		// {
+		//	case 0:
+		//		MenuState.character = 'blocky'; // the numerical ID for blocky is 0
+		//	case 1:
+		//		MenuState.character = 'jake'; // the numerical ID for jake is 1 (this is an example of adding custom characters)
+		// }
 	}
 
 	override public function create():Void
 	{
-		characterSelect = new FlxText(60, 120, "Select Character" + "\n< " + character + " >", 16);
-		characterSelect.setFormat(Assets.getFont("vgaoem.fon"), 16);
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Asset.optionsBackground__png, false, 800, 600);
+		bg.setGraphicSize(Std.int(bg.width * 1.0));
+		bg.screenCenter();
+		add(bg);
 
-		menuText = new FlxText(0, 560, 0, "Main Menu", 18);
+		var characterSelect:FlxText = new FlxText(600, 70, 0, "Select Character" + "\n < " + character + " >", 16);
+		characterSelect.setFormat("Consolas", 16, FlxColor.BLACK);
+		add(characterSelect);
+
+		var menuText:FlxText = new FlxText(0, 560, 0, "Main Menu", 18);
 		menuText.setFormat("Consolas", 18, FlxColor.BLACK);
 		add(menuText);
 
-		demoText = new FlxText(0, 580, 0, "Tech Demo, Available to public for testing...", 18);
+		var demoText:FlxText = new FlxText(0, 580, 0, "Tech Demo, Available to public for testing...", 18);
 		demoText.setFormat("Consolas", 18, FlxColor.BLACK);
 		add(demoText);
 
-		final background = new OptionsBackground(0, 0);
-		add(background);
-
 		backButton = new FlxButton(10, 30, "", clickBack);
-		backButton.loadGraphic(Assets.buttonBack__png, true, 20, 20);
-		backButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		backButton.loadGraphic(Asset.buttonBack__png, true, 20, 20);
+		backButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		add(backButton);
 
 		runButton = new FlxButton(0, 30, "New Run", startGame);
-		runButton.loadGraphic(Assets.buttonmedium__png, true, 60, 20);
-		runButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		runButton.loadGraphic(Asset.buttonSmall__png, true, 60, 20);
+		runButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		runButton.x = (FlxG.width / 2) - 10 - backButton.width;
 		add(runButton);
 
 		FlxG.camera.fade(FlxColor.WHITE, 0.32, true);
 
 		super.create();
+	}
+
+	override public function update(elapsed:Float)
+	{
+		updateCharacterNavigation();
+		super.update(elapsed);
 	}
 
 	function clickBack()
@@ -82,13 +120,5 @@ class MenuState extends FlxState
 		{
 			FlxG.switchState(new PlayState());
 		});
-		if (character == null)
-		{
-			trace('No character found, please refer to either the code or the character\'s files!');
-		}
-		else
-		{
-			trace('Starting game with selected character: ' + MenuState.character + '!');
-		}
 	}
 }

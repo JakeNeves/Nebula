@@ -8,11 +8,19 @@ class TimeStructureUtils
 
 	public var length:Float = Math.POSITIVE_INFINITY; // ticks/second?
 
+	/**
+	 * Clears all known time structures
+	 */
 	public static function clearAllTimeStructures()
 	{
 		AnyTimeStructure = [];
 	}
 
+	/**
+	 * Allows you to get a specific timestamps (Useful in making cutscenes/times-events)
+	 * @param tick the amount of ticks specified (20 ticks = 1 second)
+	 * @return TimeStructureUtils
+	 */
 	public static function getTimestamp(tick:Float):TimeStructureUtils
 	{
 		for (i in AnyTimeStructure)

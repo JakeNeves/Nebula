@@ -9,16 +9,22 @@ import flixel.util.FlxColor;
 class Player extends FlxSprite
 {
 	static inline var speed:Float = 100;
+	static inline var sprintSpeed:Float = 175;
 
 	public function new(x:Float = 0, y:Float = 0)
 	{
 		super(x, y);
 
+		/**
+		 *	Keep in mind that when you add any new characters, it's suggested that you
+		 *	give the character a numerical ID otherwise you won't be able to play as your
+		 *	modded character.
+		 */
 		switch (MenuState.character)
 		{
 			case 'blocky':
 				// testing changeable characters
-				loadGraphic(Assets.blocky__png, true, 16, 32);
+				loadGraphic(Asset.blocky__png, true, 16, 32);
 
 				// movement
 				animation.add("up", [2, 0, 1, 0], 8, false);
@@ -32,7 +38,7 @@ class Player extends FlxSprite
 				animation.add("punchLeft", [14, 6], 8, false);
 				animation.add("punchRight", [15, 9], 8, false);
 			default:
-				loadGraphic(Assets.jake__png, true, 16, 32);
+				loadGraphic(Asset.jake__png, true, 16, 32);
 
 				// movement
 				animation.add("up", [2, 0, 1, 0], 8, false);
@@ -47,12 +53,20 @@ class Player extends FlxSprite
 				animation.add("punchRight", [15, 9], 8, false);
 		}
 
+		if (MenuState.character == null)
+		{
+			trace('No character found, please refer to either the code or the character\'s files!');
+		}
+		else
+		{
+			trace('Starting game with ' + MenuState.character + ' as the selected character!');
+		}
+
 		// setFacingFlip(FlxObject.LEFT, false, true);
 		// setFacingFlip(FlxObject.RIGHT, true, false);
 
 		drag.x = drag.y = 300;
 		setSize(16, 32);
-		// offset.set(0, 0);
 	}
 
 	override function update(elapsed:Float)
@@ -68,6 +82,7 @@ class Player extends FlxSprite
 		var down:Bool = false;
 		var left:Bool = false;
 		var right:Bool = false;
+		var sprint:Bool = false;
 
 		var esc:Bool = false;
 
@@ -79,6 +94,7 @@ class Player extends FlxSprite
 		down = FlxG.keys.anyPressed([DOWN, S]);
 		left = FlxG.keys.anyPressed([LEFT, A]);
 		right = FlxG.keys.anyPressed([RIGHT, D]);
+		sprint = FlxG.keys.anyPressed([SHIFT, CONTROL]);
 
 		esc = FlxG.keys.anyPressed([ESCAPE]);
 
@@ -122,7 +138,11 @@ class Player extends FlxSprite
 				facing = FlxObject.RIGHT;
 			}
 
-			velocity.set(speed, 0);
+			if (sprint)
+				velocity.set(sprintSpeed, 0);
+			else
+				velocity.set(speed, 0);
+
 			velocity.rotate(FlxPoint.weak(0, 0), newAngle);
 
 			if ((velocity.x != 0 || velocity.y != 0) && touching == FlxObject.NONE)

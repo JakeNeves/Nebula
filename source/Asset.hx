@@ -6,15 +6,29 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 
 @:build(flixel.system.FlxAssets.buildFileReferences("assets", true))
-class Assets
+class Asset
 {
 	static var currentArea:String;
 
+	/*
+	 * Gets any specific font in the game's files
+	 * @param key The name of the font file
+	 */
 	inline static public function getFont(key:String)
 	{
 		return 'assets/fonts/$key';
 	}
 
+	inline static public function getTextFile(key:String, ?lib:String)
+	{
+		return getPath('$key.txt', TEXT, lib);
+	}
+
+	/**
+	 * Gets any specific character in the 'player' folder
+	 * in the game's files
+	 * @param key The file name for the character
+	 */
 	inline static public function getCharacter(key:String)
 	{
 		return 'assets/images/player/$key';
@@ -37,11 +51,22 @@ class Assets
 		return 'assets/$file';
 	}
 
+	/**
+	 * Allows you to get a specific image under any file name
+	 * @param key The image's file name
+	 * @param lib The library the image is located
+	 */
 	inline static public function image(key:String, ?lib:String)
 	{
 		return getPath('images/$key.png', IMAGE, lib);
 	}
 
+	/**
+	 * Allows you to get any spritesheet made in Adobe Animate or similar
+	 * @param key the file name of the image
+	 * @param lib the library the image is located
+	 * @param isImageAtlas determines if it is an multi-image atlas
+	 */
 	inline static public function getAnimatedImageAtlasXML(key:String, ?lib:String, ?isImageAtlas:Bool = false)
 	{
 		var useCacheXML = FlxG.save.data.cacheImages;

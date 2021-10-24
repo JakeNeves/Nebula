@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxG;
+import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxBar;
@@ -8,7 +9,6 @@ import flixel.ui.FlxButton;
 import flixel.util.FlxAxes;
 import flixel.util.FlxColor;
 import flixel.util.FlxSave;
-import title.Background;
 
 class SettingsState extends FlxState
 {
@@ -23,13 +23,17 @@ class SettingsState extends FlxState
 
 	var save:FlxSave;
 
+	// #if desktop
 	// var fullscreenButton:FlxButton;
+	// #end
 	var volumeBar:FlxBar;
 
 	override public function create():Void
 	{
-		final background = new Background(0, 0);
-		add(background);
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Asset.background__png, false, 800, 600);
+		bg.setGraphicSize(Std.int(bg.width * 1.0));
+		bg.screenCenter();
+		add(bg);
 
 		title = new FlxText(0, 20, 0, "Settings", 22);
 		title.setFormat("Arial", 32, FlxColor.WHITE);
@@ -43,13 +47,13 @@ class SettingsState extends FlxState
 		add(volText);
 
 		volDownButton = new FlxButton(8, volText.y + volText.height + 2, "-", clickVolDown);
-		volDownButton.loadGraphic(Assets.button__png, true, 20, 20);
-		volDownButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		volDownButton.loadGraphic(Asset.buttonSquare__png, true, 20, 20);
+		volDownButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		add(volDownButton);
 
 		volUpButton = new FlxButton(FlxG.width - 28, volDownButton.y, "+", clickVolUp);
-		volUpButton.loadGraphic(Assets.button__png, true, 20, 20);
-		volUpButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		volUpButton.loadGraphic(Asset.buttonSquare__png, true, 20, 20);
+		volUpButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		add(volUpButton);
 
 		volumeBar = new FlxBar(volDownButton.x + volDownButton.width + 4, volDownButton.y, LEFT_TO_RIGHT, Std.int(FlxG.width - 64),
@@ -66,8 +70,8 @@ class SettingsState extends FlxState
 		add(volAmountText);
 
 		backButton = new FlxButton(0, 0, "Back", clickBack);
-		backButton.loadGraphic(Assets.buttonmedium__png, true, 60, 20);
-		backButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		backButton.loadGraphic(Asset.buttonSmall__png, true, 60, 20);
+		backButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		backButton.x = (FlxG.width / 2) - 10 - backButton.width;
 		backButton.y = FlxG.height - backButton.height - 10;
 		add(backButton);
@@ -79,8 +83,8 @@ class SettingsState extends FlxState
 		// #end
 
 		formatButton = new FlxButton(0, 0, "Format", clickFormat);
-		formatButton.loadGraphic(Assets.buttonmedium__png, true, 60, 20);
-		formatButton.onUp.sound = FlxG.sound.load(Assets.dataFormat__wav);
+		formatButton.loadGraphic(Asset.buttonSmall__png, true, 60, 20);
+		formatButton.onUp.sound = FlxG.sound.load(Asset.dataFormat__wav);
 		formatButton.x = FlxG.width - 120 - formatButton.width;
 		formatButton.y = FlxG.height - formatButton.height - 100;
 		formatButton.screenCenter(FlxAxes.X);
@@ -128,14 +132,14 @@ class SettingsState extends FlxState
 	function clickVolDown()
 	{
 		FlxG.sound.volume -= 0.1;
-		Cache.save.data.volume = FlxG.sound.volume;
+		save.data.volume = FlxG.sound.volume;
 		updateVolume();
 	}
 
 	function clickVolUp()
 	{
 		FlxG.sound.volume += 0.1;
-		Cache.save.data.volume = FlxG.sound.volume;
+		save.data.volume = FlxG.sound.volume;
 		updateVolume();
 	}
 }

@@ -2,8 +2,9 @@
 
 ![Made Using Haxe](doc/images/madeUsingHaxe.png)
 
-![GitHub commits](https://img.shields.io/github/commits-since/JakeNeves/Nebula/latest)
-[![Discord](https://img.shields.io/discord/339097562814611456?label=discord)](https://discord.gg/HUJ8KUSAjC)
+![Releases](https://img.shields.io/github/commits-since/JakeNeves/Nebula/latest?include_prereleases&label=latest%20Build)
+
+[![Discord](https://img.shields.io/discord/339097562814611456?label=jake's%20lounge)](https://discord.gg/HUJ8KUSAjC)
 
 ----------------------
 
@@ -19,7 +20,7 @@
 
 # Chapter-1
 
-## The Game
+ >The Game
  - **What is Nebula?**
      - Nebula is an rpg with a twist to most of the typical rpgs, by simply adding
        various features to Nebula's combat system, such as rage and ardreneline.
@@ -33,21 +34,21 @@
 
 # Chapter-2
 
-## The Dependencies
+ >The Dependencies
  1. Install the following...
 
 ----
 
-    1. [Haxe](https://haxe.org/download) 4.2.3 or newer (latest version is recommended)
-    2. [Git](https://git-scm.com/downloads)
+  1. [Haxe](https://haxe.org/download) 4.2.3 or newer (latest version is recommended)
+  2. [Git](https://git-scm.com/downloads)
  
         FOR LINUX USERS:
     
             sudo apt install git
 
-    3. [Visual Studio](https://visualstudio.microsoft.com/)
+  3. [Visual Studio](https://visualstudio.microsoft.com/)
 
-    4. Install the "Desktop development with C++" extension
+  4. Install the "Desktop development with C++" extension
 
  2. Clone This Repository
 
@@ -55,17 +56,17 @@
 
         git clone https://github.com/JakeNeves/Nebula
 
-    **Note to Keep in mind**
+ **Note to Keep in mind**
 
-    Make sure you are in the directory you are cloning this into.
+ Make sure you are in the directory you are cloning this into.
 
  3. Since you have installed [Haxe](https://haxe.org) now, you sould run the following commands
 
 ----
 
-    **Note to Keep in mind**
+ **Note to Keep in mind**
 
-    On windows, open up Command Propmt or Power Shell.
+ On windows, open up Command Propmt or Power Shell.
 
         haxelib install lime
         haxelib run lime setup
@@ -79,15 +80,20 @@
 Nebula is only available on PC/Mac, if you want to build a Flash/HTML5 port, you will need to modify some of the games, code. You may want to use an IDE such as [Visual Studio Code](https://code.visualstudio.com/) (Reccomended) and install the "Haxe Extension pack" and the "Debugger for Chrome Extension".
 
 # Chapter-3
-
-## Compiling and Running the Game
+> Compiling and Running the Game
 
  There will be a file called 'compileandrun.bat', double click on the file Otherwise you can open Windows Power Shell or Command Prompt and type in the following
     
         lime test windows
 
+ Alternatively, if you are debugging, there will be a file called 'compileanddebug.bat', or you can type
+    
+        lime test windows -debug
+
+ *if there is no debug tools, press F2 to enable Haxe-Flixel's debugging tools (this only applies when you're debugging)*
+
 # Chapter-4
 
-## Credits
+> Credits
 
  - [Jake "JakeTEM" Neves](https://www.youtube.com/channel/UCaPYj8aYX30iDGOP7B9HUIQ) - Programming and Everything Else

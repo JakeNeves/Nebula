@@ -1,25 +1,21 @@
 package;
 
 import flixel.FlxG;
+import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.util.FlxAxes;
 import flixel.util.FlxColor;
-import title.Background;
-import title.JakeNevesHaxe;
-import title.Title;
+import flixel.util.FlxSave;
+import lime.utils.Assets;
+import util.NebulaGeneralState;
 
 class TitleState extends FlxState
 {
-	var title:FlxText;
+	// var title:FlxText;
 	// var fartButton:FlxButton;
-	var playButton:FlxButton;
-	var specialButton:FlxButton;
-	var settingsButton:FlxButton;
-
-	var versionText:FlxText;
-	var infoText:FlxText;
+	var save:FlxSave;
 
 	#if desktop
 	var exitButton:FlxButton;
@@ -32,22 +28,26 @@ class TitleState extends FlxState
 		// title.screenCenter(FlxAxes.X);
 		// add(title);
 
-		if (FlxG.sound.music == null)
-		{
-			FlxG.sound.playMusic(Assets.title__ogg);
-		}
+		// if (FlxG.sound.music == null)
+		// {
+		//	FlxG.sound.playMusic(Asset.title__ogg);
+		// }
 
-		final background = new Background(0, 0);
-		add(background);
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Asset.background__png, false, 800, 600);
+		bg.setGraphicSize(Std.int(bg.width));
+		bg.screenCenter(FlxAxes.X);
+		add(bg);
 
-		final title = new Title(280, 100);
+		var title:FlxSprite = new FlxSprite().loadGraphic(Asset.nebula__png, false, 236, 52);
+		title.screenCenter(FlxAxes.X);
+		title.y = 100;
 		add(title);
 
-		versionText = new FlxText(0, 560, 0, "v0.01 TECH DEMO", 18);
+		var versionText = new FlxText(0, 560, 0, "v0.03 TECH DEMO", 18);
 		versionText.setFormat("Consolas", 18, FlxColor.WHITE);
 		add(versionText);
 
-		infoText = new FlxText(0, 580, 0, "2021 Jake Neves" + "\nDo Not Distribute", 18);
+		var infoText = new FlxText(0, 580, 0, "2021 Jake Neves" + "\nDo Not Distribute", 18);
 		infoText.setFormat("Consolas", 18, FlxColor.WHITE);
 		add(infoText);
 
@@ -58,34 +58,42 @@ class TitleState extends FlxState
 		// fartButton.y = FlxG.height - fartButton.height - 10;
 		// add(fartButton);
 
-		playButton = new FlxButton(0, 0, "Venture Fourth", clickPlay);
-		playButton.loadGraphic(Assets.buttonlarge__png, true, 120, 20);
-		playButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		var playButton = new FlxButton(0, 0, "Venture Fourth", clickPlay);
+		playButton.loadGraphic(Asset.buttonMedium__png, true, 120, 20);
+		playButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		playButton.x = FlxG.width - 120 - playButton.width;
 		playButton.y = FlxG.height - playButton.height - 400;
 		playButton.screenCenter(FlxAxes.X);
 		add(playButton);
 
-		specialButton = new FlxButton(0, 0, "Specials Features");
-		specialButton.loadGraphic(Assets.buttonlarge__png, true, 120, 20);
-		specialButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		var specialButton = new FlxButton(0, 0, "Specials Features");
+		specialButton.loadGraphic(Asset.buttonMedium__png, true, 120, 20);
+		specialButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		specialButton.x = FlxG.width - 120 - specialButton.width;
 		specialButton.y = FlxG.height - specialButton.height - 375;
 		specialButton.screenCenter(FlxAxes.X);
 		add(specialButton);
 
-		settingsButton = new FlxButton(0, 0, "Settings", clickSettings);
-		settingsButton.loadGraphic(Assets.buttonlarge__png, true, 120, 20);
-		settingsButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		var settingsButton = new FlxButton(0, 0, "Settings", clickSettings);
+		settingsButton.loadGraphic(Asset.buttonMedium__png, true, 120, 20);
+		settingsButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		settingsButton.x = FlxG.width - 120 - settingsButton.width;
 		settingsButton.y = FlxG.height - settingsButton.height - 350;
 		settingsButton.screenCenter(FlxAxes.X);
 		add(settingsButton);
 
+		var issuesButton = new FlxButton(0, 0, "Issues", clickIssues);
+		issuesButton.loadGraphic(Asset.buttonSmall__png, true, 60, 20);
+		issuesButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
+		issuesButton.x = FlxG.width - 120 - issuesButton.width;
+		issuesButton.y = FlxG.height - issuesButton.height - 325;
+		settingsButton.screenCenter(FlxAxes.X);
+		add(issuesButton);
+
 		#if desktop
-		exitButton = new FlxButton(780, 0, "", clickExit);
-		exitButton.loadGraphic(Assets.buttonExit__png, true, 20, 20);
-		exitButton.onUp.sound = FlxG.sound.load(Assets.click__wav);
+		var exitButton = new FlxButton(780, 0, "", clickExit);
+		exitButton.loadGraphic(Asset.buttonExit__png, true, 20, 20);
+		exitButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
 		add(exitButton);
 		#end
 
@@ -100,6 +108,11 @@ class TitleState extends FlxState
 		Sys.exit(0);
 	}
 	#end
+
+	function clickIssues()
+	{
+		NebulaGeneralState.openHyperlink('https://github.com/JakeNeves/Nebula/issues');
+	}
 
 	function clickSettings()
 	{
