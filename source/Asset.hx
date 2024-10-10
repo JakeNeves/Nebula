@@ -5,7 +5,7 @@ import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
 
-@:build(flixel.system.FlxAssets.buildFileReferences("assets", true))
+// @:build(flixel.system.FlxAssets.buildFileReferences("assets", true))
 class Asset
 {
 	static var currentArea:String;
@@ -25,13 +25,38 @@ class Asset
 	}
 
 	/**
+	 * Gets any specific JSON data file in the
+	 * game's data folder
+	 * @param key The JSON filename
+	 */
+	inline static public function getJSONFile(key:String)
+	{
+		return 'assets/data/$key.json';
+	}
+
+	inline static public function getDataFile(key:String)
+	{
+		return 'assets/data/$key';
+	}
+
+	/**
 	 * Gets any specific character in the 'player' folder
 	 * in the game's files
 	 * @param key The file name for the character
 	 */
 	inline static public function getCharacter(key:String)
 	{
-		return 'assets/images/player/$key';
+		return 'assets/images/player/$key.png';
+	}
+
+	inline static public function getSound(key:String)
+	{
+		return 'assets/sounds/$key.wav';
+	}
+
+	inline static public function getMusic(key:String)
+	{
+		return 'assets/music/$key.ogg';
 	}
 
 	inline static public function getCharacterList() {}

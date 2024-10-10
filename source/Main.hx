@@ -6,6 +6,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxSave;
 import openfl.display.FPS;
 import openfl.display.Sprite;
+import util.Changeables;
 
 class Main extends Sprite
 {
@@ -13,26 +14,15 @@ class Main extends Sprite
 
 	public function new()
 	{
-		#if fesktop
-		if (save.data.fullscreen != null)
-		{
-			startFullscreen = save.data.fullscreen;
-		}
-		#end
-
 		#if debug
 		FlxG.debugger.drawDebug;
 		#end
 
 		super();
 		addChild(new FlxGame(800, 600, TitleState, 1, 60, 60, false));
-
-		// if (save.data.volume != null)
-		// {
-		//	FlxG.sound.volume = save.data.volume;
-		// }
-		// save.close();
 	}
+
+	public static var versionNumber:String = "0.04";
 
 	var game:FlxGame;
 

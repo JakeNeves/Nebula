@@ -67,7 +67,7 @@ class MenuState extends FlxState
 
 	override public function create():Void
 	{
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Asset.optionsBackground__png, false, 800, 600);
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Asset.image("menu/optionsBackground"), false, 800, 600);
 		bg.setGraphicSize(Std.int(bg.width * 1.0));
 		bg.screenCenter();
 		add(bg);
@@ -85,13 +85,13 @@ class MenuState extends FlxState
 		add(demoText);
 
 		backButton = new FlxButton(10, 30, "", clickBack);
-		backButton.loadGraphic(Asset.buttonBack__png, true, 20, 20);
-		backButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
+		backButton.loadGraphic(Asset.image("menu/buttonBack"), true, 20, 20);
+		backButton.onUp.sound = FlxG.sound.load(Asset.getSound("general/click"));
 		add(backButton);
 
 		runButton = new FlxButton(0, 30, "New Run", startGame);
-		runButton.loadGraphic(Asset.buttonSmall__png, true, 60, 20);
-		runButton.onUp.sound = FlxG.sound.load(Asset.click__wav);
+		runButton.loadGraphic(Asset.image("ui/buttonSmall"), true, 60, 20);
+		runButton.onUp.sound = FlxG.sound.load(Asset.getSound("general/click"));
 		runButton.x = (FlxG.width / 2) - 10 - backButton.width;
 		add(runButton);
 

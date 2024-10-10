@@ -16,7 +16,7 @@
 	<!-- ____________________________ Window Settings ___________________________ -->
 
 	<!--These window settings apply to all targets-->
-	<window width="800" height="600" fps="60" background="#000000" hardware="true" vsync="false" />
+	<window width="1280" height="720" fps="260" background="#000000" hardware="true" vsync="false" />
 
 	<!--HTML5-specific-->
 	<window if="html5" resizable="false" />
@@ -29,7 +29,14 @@
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
-	<set name="BUILD_DIR" value="export" />
+	<set name="BUILD_DIR" value="export/release" unless="debug" />
+	<set name="BUILD_DIR" value="export/debug" if="debug" />
+	<set name="BUILD_DIR" value="export/modded" if="mods" />
+	<set name="BUILD_DIR" value="export/debugModded" if="debugmods" />
+
+	<define name="MODDED_CLIENT" if="mods" />
+	<define name="MODDED_DEBUG_CLIENT" if="debugmods" />
+
 	<source path="source" />
 	<assets path="assets" />
 	<assets path="mods" />
@@ -72,8 +79,6 @@
 
 	<!--Disable the Flixel core focus lost screen-->
 	<!--<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />-->
-
-	<haxedef name="NEBULA_MODDED_BUILD" if="mods"/>
 
 	<!--Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />

@@ -11,6 +11,11 @@ class Player extends FlxSprite
 	static inline var speed:Float = 100;
 	static inline var sprintSpeed:Float = 175;
 
+	public static var playerHP:Int = 100;
+	public static var playerStamina:Int = 100;
+	public static var rage:Int = 1000;
+	public static var adreneline:Int = 1000;
+
 	public function new(x:Float = 0, y:Float = 0)
 	{
 		super(x, y);
@@ -24,7 +29,7 @@ class Player extends FlxSprite
 		{
 			case 'blocky':
 				// testing changeable characters
-				loadGraphic(Asset.blocky__png, true, 16, 32);
+				loadGraphic(Asset.getCharacter("blocky"), true, 16, 32);
 
 				// movement
 				animation.add("up", [2, 0, 1, 0], 8, false);
@@ -38,7 +43,7 @@ class Player extends FlxSprite
 				animation.add("punchLeft", [14, 6], 8, false);
 				animation.add("punchRight", [15, 9], 8, false);
 			default:
-				loadGraphic(Asset.jake__png, true, 16, 32);
+				loadGraphic(Asset.getCharacter("jake"), true, 16, 32);
 
 				// movement
 				animation.add("up", [2, 0, 1, 0], 8, false);
@@ -66,7 +71,8 @@ class Player extends FlxSprite
 		// setFacingFlip(FlxObject.RIGHT, true, false);
 
 		drag.x = drag.y = 300;
-		setSize(16, 32);
+		setSize(16, 16);
+		offset.set(0, 16);
 	}
 
 	override function update(elapsed:Float)
@@ -89,6 +95,10 @@ class Player extends FlxSprite
 		// punching
 		var z:Bool = false;
 
+		// zoom
+		var zoomIn:Bool = false;
+		var zoomOut:Bool = false;
+
 		#if FLX_KEYBOARD
 		up = FlxG.keys.anyPressed([UP, W]);
 		down = FlxG.keys.anyPressed([DOWN, S]);
@@ -97,6 +107,9 @@ class Player extends FlxSprite
 		sprint = FlxG.keys.anyPressed([SHIFT, CONTROL]);
 
 		esc = FlxG.keys.anyPressed([ESCAPE]);
+
+		zoomIn = FlxG.keys.anyPressed([PAGEUP]);
+		zoomOut = FlxG.keys.anyPressed([PAGEDOWN]);
 
 		z = FlxG.keys.anyPressed([Z]);
 		#end
@@ -180,6 +193,14 @@ class Player extends FlxSprite
 				case FlxObject.RIGHT:
 					animation.play("punchRight");
 			}
+		}
+		if (zoomIn)
+		{
+			FlxG.camera.zoom += 0.01;
+		}
+		else if (zoomOut)
+		{
+			FlxG.camera.zoom -= 0.01;
 		}
 	}
 }
