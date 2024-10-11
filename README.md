@@ -1,99 +1,87 @@
-![Nebula](doc/images/nebula.png)
+# Nebula
 
-![Made Using Haxe](doc/images/madeUsingHaxe.png)
+A game by Jake Neves
 
-![Releases](https://img.shields.io/github/commits-since/JakeNeves/Nebula/latest?include_prereleases&label=latest%20Build)
+---
 
-[![Discord](https://img.shields.io/discord/339097562814611456?label=jake's%20lounge)](https://discord.gg/HUJ8KUSAjC)
+No functional build of the game is available right now, once there is, there should
+be a build ready, other than the old Haxe-Flixel prototype builds.
 
-----------------------
+---
 
-## Table of Contents
+## The Game
+### Table of Contents
 
-* [The game](#chapter-1)
+1 - [Plot](#plot)
 
-* [The Dependencies](#chapter-2)
+2 - [Endings](#endings)
 
-* [Compiling and Running the game](#chapter-3)
+3 - [Gameplay](#gameplay)
 
-* [Credits](#chapter-4)
+4 - [Secrets](#secrets)
 
-# Chapter-1
+5 - [Media](#media)
 
- >The Game
- - **What is Nebula?**
-     - Nebula is an rpg with a twist to most of the typical rpgs, by simply adding
-       various features to Nebula's combat system, such as rage and ardreneline.
- - **What is Rage and Ardreneline?**
-     - Ardreneline builds up overtime while in combat and when triggered, you will
-       temorarly gain an increase of damage and critical strike chance. Rage build up while dealing damage, critical strikes will boost the time it takes to build up, when triggered, you gain a large temporary increase of speed, damage, critical strike chance.
- - **What is the main goal of the game?**
-     - The main goal of the game is to defeat the game's main antagonist (like in every game ever...), and obtain the time stone and restore the empire of gallahard, and let reality resume at it's tranquil state!
- - **What is the main plot of the game?**
-     - The plot of the game is, the game's antagonist, "Sylux", steals a very    important artifact, the Time Stone, it's used to stablize reality and is sealed away in the Brenin Masolium, guarded by graves of fallen guards that guarded the gate at the Capital Territory!
+---
 
-# Chapter-2
+# Plot
 
- >The Dependencies
- 1. Install the following...
+You play as Emperor Jake I of Gallahard, as you wake up from a 2 year comba, only to find out that your homeland, the Gallahard Empire has laid to ruin and collaped by the tyrannical demon overlord, Sylux! Journey through the empire as Emperor Jake I tries to fight back against the demon overlord and his forces, with a hint of unexpected twists such as switching from a simple top-down RPG to a platformer with some crazy mechanics, or even a shmup! Do you have the wits to take on the tyrant and save Gallahard?
 
-----
+---
 
-  1. [Haxe](https://haxe.org/download) 4.2.3 or newer (latest version is recommended)
-  2. [Git](https://git-scm.com/downloads)
- 
-        FOR LINUX USERS:
-    
-            sudo apt install git
+# Endings
 
-  3. [Visual Studio](https://visualstudio.microsoft.com/)
+There are three endings you can get, depending on which path you take!
 
-  4. Install the "Desktop development with C++" extension
+#### Neutral Ending
 
- 2. Clone This Repository
+The default ending that you get, no matter what you do, Sylux kills the Emperor of Gallahard and now it's just you, the player and Sylux to decide your fate, will you let the tyrant delete your save file, or will you refrain from handing your precious save file over to him to delete?
 
-----
+#### Failed Emperor
 
-        git clone https://github.com/JakeNeves/Nebula
+The second ending that you can get, Sylux doesn't kill the Emperor of Gallahard, but rather slowly gets bored of fighting you to the point where he stops and gets a minor reality check, then goes on to brag about needing to reset the timeline...
 
- **Note to Keep in mind**
+#### True Revelation
 
- Make sure you are in the directory you are cloning this into.
+The third and true ending, Emperor Jake I battles against Sylux and deals a final blow to the tyrant, as well as recrute a massive and ludicrous army to help push back the demonic forces with him, and save Gallahard!
 
- 3. Since you have installed [Haxe](https://haxe.org) now, you sould run the following commands
+---
 
-----
+# Gameplay
 
- **Note to Keep in mind**
+There are three different game modes, each with some twists part way through!
 
- On windows, open up Command Propmt or Power Shell.
+#### RPG Mode
 
-        haxelib install lime
-        haxelib run lime setup
-        haxelib install flixel
-        haxelib install flixel-addons
-        haxelib install flixel-ui
-        haxelib install flixel-tools
+The way the game is intended to be played, of course with some of that good old series of quests and side quests and a decent amount of areas to explore!
 
-**Note to keep in mind**
+#### Platformer Mode
 
-Nebula is only available on PC/Mac, if you want to build a Flash/HTML5 port, you will need to modify some of the games, code. You may want to use an IDE such as [Visual Studio Code](https://code.visualstudio.com/) (Reccomended) and install the "Haxe Extension pack" and the "Debugger for Chrome Extension".
+Part way through the game, you'll stumble across across some platforming, but be careful, a lot of the platforming can be quite a challenge, maybe a bit learny in some cases, with the ability to double jump, wall jump and dash, those abilities are gated behind bosses, except for wall jumping, you can get anywhere quite easily, even in some of the toughest situations!
 
-# Chapter-3
-> Compiling and Running the Game
+#### Shmup Mode
 
- There will be a file called 'compileandrun.bat', double click on the file Otherwise you can open Windows Power Shell or Command Prompt and type in the following
-    
-        lime test windows
+Have you ever played games like Gradius, 1942 or even UN Squadron, then this game mode might have a similar feeling to those game, but with some crazy twists and such, it's probably going to be a wild ride with this game mode!
 
- Alternatively, if you are debugging, there will be a file called 'compileanddebug.bat', or you can type
-    
-        lime test windows -debug
+---
 
- *if there is no debug tools, press F2 to enable Haxe-Flixel's debugging tools (this only applies when you're debugging)*
+# Secrets
 
-# Chapter-4
+Who knows what secrets you can find, just don't try to find specific secrets, otherwise the demon overlord will get jealous and tamper your save file, he could throw you back to the main menu or reload where you last save!
 
-> Credits
+Otherwise there are some fun little secrets, and some of them can be quite creepy, depending on what you find throughout your journey...
 
- - [Jake "JakeTEM" Neves](https://www.youtube.com/channel/UCaPYj8aYX30iDGOP7B9HUIQ) - Programming and Everything Else
+---
+
+# Media
+
+You can follow the devs' medias here!
+
+#### Jake "JakeTEM" Neves - Game Creator/Lead Developer
+
+* Twitter - [@realjaketem](https://twitter.com/realjaketem)
+* YouTube - [Jake Neves](https://youtube.com/@realjaketem)
+* Reddit - [u/realjaketem](https://reddit.com/user/realjaketem)
+
+[![Discord](https://img.shields.io/discord/339097562814611456?label=Jake's%20Lounge%20Discord%20Server)](https://discord.gg/HUJ8KUSAjC)

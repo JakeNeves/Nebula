@@ -1,0 +1,1 @@
+font_delete(global.main_font);

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_dialogue",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.267528,
+  "name":"snd_dialogue",
+  "parent":{
+    "name":"UI",
+    "path":"folders/Sounds/UI.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_dialogue.ogg",
+  "type":0,
+  "volume":1.0,
+}

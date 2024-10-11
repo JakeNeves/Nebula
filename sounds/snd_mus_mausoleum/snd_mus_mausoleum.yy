@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_mus_mausoleum",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":0,
+  "conversionMode":0,
+  "duration":184.61537,
+  "name":"snd_mus_mausoleum",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_mus_mausoleum.ogg",
+  "type":1,
+  "volume":1.0,
+}

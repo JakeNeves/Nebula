@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_mus_oridon",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":0,
+  "conversionMode":0,
+  "duration":200.3853,
+  "name":"snd_mus_oridon",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_mus_oridon.ogg",
+  "type":1,
+  "volume":1.0,
+}

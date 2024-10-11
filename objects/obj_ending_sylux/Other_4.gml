@@ -1,0 +1,1 @@
+set_music_ingame(noone, 0, 0);
