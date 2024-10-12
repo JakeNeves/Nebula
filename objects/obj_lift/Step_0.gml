@@ -1,5 +1,5 @@
-if (place_meeting(x, y, obj_mainchara) && !instance_exists(obj_trans_anim) && keyboard_check_pressed(ord("C"))) {
-	audio_play_sound(snd_trans_door, 8, false);
+if (!instance_exists(obj_trans_anim) && keyboard_check_pressed(ord("C")) && distance_to_object(obj_mainchara) < 10) {
+	audio_play_sound(snd_trans_mines_elevator, 8, false);
 	
 	var _inst = instance_create_depth(0, 0, -999, obj_trans_anim);
 	

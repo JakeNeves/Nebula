@@ -20,6 +20,12 @@ switch (room) {
 	#endregion
 	
 	#region Mines of Gallahard
+	#region Mines Enterances
+	case rm_mines_fields_enterance:
+		set_music_ingame(noone, 30, 0);
+	break;
+	#endregion
+	
 	case rm_mines_1:
 		set_music_ingame(snd_mus_mines, 30, 0);
 	break;
@@ -96,5 +102,20 @@ switch (room) {
 	case rm_void_1:
 		set_music_ingame(snd_mus_void_1, 30, 0);
 	break;
+	#endregion
+	
+	#region Fields
+	case rm_fields_1:
+		set_music_ingame(snd_mus_oridon, 30, 0);
+	break;
+	#endregion
+	
+	#region Oridon
+	case rm_oridon_centeral:
+		set_music_ingame(snd_mus_oridon, 30, 0);
+	break;
+	#endregion
+	
+	#region Forest
 	#endregion
 }

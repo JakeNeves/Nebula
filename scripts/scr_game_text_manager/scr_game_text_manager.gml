@@ -531,6 +531,10 @@ function start_dialogue(_dialogue_id){
 		case "BlockedMineshaft":
 			set_dialogue("It's blocked by an immovable pile of rubble, obscuring the path ahead...");
 			break;
+			
+		case "SignMines":
+			set_dialogue("To the Mines of Gallahard, watch your step while boarding the elevator!", "Sign");
+			break;
 		#endregion
 		
 		#region Diary Dialogue

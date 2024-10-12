@@ -25,7 +25,7 @@ if (_key_action) {
 			switch (pos) {
 			case 0:
 				audio_play_sound(snd_select, 0, false);
-				room_goto(rm_test1)
+				room_goto(rm_fields_1)
 				break;
 	
 			case 1:
