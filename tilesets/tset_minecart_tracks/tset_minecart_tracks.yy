@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"tset_minecart_tracks",
-  "out_columns":7,
+  "out_columns":14,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -34,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":49,
+  "tile_count":196,
 }

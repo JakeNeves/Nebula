@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":3.64034,
+  "duration":10.781429,
   "name":"snd_lone_flower_gurgle_2",
   "parent":{
     "name":"Lone Flower",

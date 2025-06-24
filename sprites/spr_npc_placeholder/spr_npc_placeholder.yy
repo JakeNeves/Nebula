@@ -23,7 +23,7 @@
   ],
   "name":"spr_npc_placeholder",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"NPC",
     "path":"folders/Sprites/NPC.yy",
@@ -32,7 +32,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_npc_placeholder",
     "autoRecord":true,
     "backdropHeight":768,
@@ -68,15 +68,13 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c75477b-d4e2-477e-b3ab-cbc90b0d5ac6","path":"sprites/spr_npc_placeholder/spr_npc_placeholder.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"354ab91b-749c-4e50-aca0-ce865bdc1676","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c75477b-d4e2-477e-b3ab-cbc90b0d5ac6","path":"sprites/spr_npc_placeholder/spr_npc_placeholder.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"354ab91b-749c-4e50-aca0-ce865bdc1676","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":6,
+    "yorigin":13,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

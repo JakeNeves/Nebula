@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_banknote_100_pickup",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.203129,
+  "name":"snd_banknote_100_pickup",
+  "parent":{
+    "name":"Pickup",
+    "path":"folders/Sounds/Pickup.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_banknote_100_pickup.ogg",
+  "type":0,
+  "volume":1.0,
+}

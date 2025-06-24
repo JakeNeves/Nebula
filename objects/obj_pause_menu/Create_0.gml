@@ -14,8 +14,7 @@ option[0, 3] = "Exit to Title";
 option[1, 0] = "Window Size";
 option[1, 1] = "Key Binds";
 option[1, 2] = "Blood and Gore";
-option[1, 3] = "Toggle Debug Mode";
-option[1, 4] = "Back";
+option[1, 3] = "Back";
 
 op_length = 0;
 

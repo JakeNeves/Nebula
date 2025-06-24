@@ -1,0 +1,1 @@
+draw_text_transformed(x + 650, y + 570, $"FPS: {fps}", 2, 2, 0);

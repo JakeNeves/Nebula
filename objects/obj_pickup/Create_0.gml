@@ -1,0 +1,1 @@
+collidable_map = layer_tilemap_get_id("Collidable");

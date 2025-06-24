@@ -18,32 +18,28 @@ if (pos < 0)
 if (_key_action) {
 	
 	var _start_menu_id = menu_id;
+    audio_play_sound(snd_select, 0, false);
 	
 	switch (menu_id) {
 		#region Main Menu
 		case 0:
 			switch (pos) {
 			case 0:
-				audio_play_sound(snd_select, 0, false);
-				room_goto(rm_fields_1)
+				menu_id = 3;
 				break;
 	
 			case 1:
-				audio_play_sound(snd_select, 0, false);
 				menu_id = 2;
 				break;
 				
 			case 2:
-				audio_play_sound(snd_select, 0, false);
 				menu_id = 1;
 				break;
 	
 			case 3:
-				audio_play_sound(snd_select, 0, false);
 				break;
 	
 			case 4:
-				audio_play_sound(snd_select, 0, false);
 				game_end();
 				break;
 			}
@@ -54,70 +50,124 @@ if (_key_action) {
 		case 1:
 			switch (pos) {
 			case 0:
-				audio_play_sound(snd_select, 0, false);
 				break;
 	
 			case 1:
-				audio_play_sound(snd_select, 0, false);
 				break;
 	
 			case 2:
-				audio_play_sound(snd_select, 0, false);
-				break;
-	
-			case 3:
-				audio_play_sound(snd_select, 0, false);
-				if (!global.is_debug_mode_enabled) {
-					global.is_debug_mode_enabled = true;
-					show_debug_log(true);
-				} else {
-					global.is_debug_mode_enabled = false;
-					show_debug_log(false);
-				}
 				break;
 				
-			case 4:
-				audio_play_sound(snd_select, 0, false);
+			case 3:
 				menu_id = 0;
 				break;
 			}
 			break;
 		#endregion
 		
-		#region Continue
+        #region Continue
 		case 2:
 			switch (pos) {
 			case 0:
-				audio_play_sound(snd_select, 0, false);
 				global.game_data_file = 0;
+                show_debug_message("File A - Loaded!")
 				load_game(0);
 				break;
 	
 			case 1:
-				audio_play_sound(snd_select, 0, false);
 				global.game_data_file = 1;
+                show_debug_message("File B - Loaded!")
 				load_game(1);
 				break;
 	
 			case 2:
-				audio_play_sound(snd_select, 0, false);
 				global.game_data_file = 2;
+                show_debug_message("File C - Loaded!")
 				load_game(2);
 				break;
 	
 			case 3:
-				audio_play_sound(snd_select, 0, false);
 				global.game_data_file = 3;
+                show_debug_message("File D - Loaded!")
 				load_game(3);
 				break;
 	
 			case 4:
-				audio_play_sound(snd_select, 0, false);
 				menu_id = 0;
 				break;
 			}
 			break;
 		#endregion
+        
+        #region New Game
+        case 3:
+            switch (pos) {
+                case 0:
+                    global.game_data_file = 0;
+                    menu_id = 4;
+                break;
+            
+                case 1:
+                    global.game_data_file = 1;
+                    menu_id = 4;
+                break;
+            
+                case 2:
+                    global.game_data_file = 2;
+                    menu_id = 4;
+                break;
+            
+                case 3: 
+                    global.game_data_file = 3;
+                    menu_id = 4;
+                break;
+            
+                case 4:
+                    menu_id = 0;
+                break;
+        }
+        break;
+        #endregion
+        
+        #region Difficulty
+        case 4:
+            switch (pos) { 
+            case 0: 
+                global.difficulty = DIFFICULTY.EASY;
+                show_debug_message("New game started on Easy mode!")
+                room_goto(rm_fields_1)
+                break;
+                
+            case 1:
+                global.difficulty = DIFFICULTY.MEDIUM;
+                show_debug_message("New game started on Medium mode!")
+                room_goto(rm_fields_1)
+                break;
+                
+            case 2:
+                global.difficulty = DIFFICULTY.HARD;
+                show_debug_message("New game started on Hard mode!")
+                room_goto(rm_fields_1)
+                break;
+                
+            case 3:
+                global.difficulty = DIFFICULTY.INSANE;
+                show_debug_message("New game started on Insane mode!")
+                room_goto(rm_fields_1)
+                break; 
+                
+            case 4:
+                global.difficulty = DIFFICULTY.EXTREME;
+                show_debug_message("New game started on Extreme mode!")
+                room_goto(rm_fields_1)
+                break;
+                
+            case 5:
+                menu_id = 3;
+                break;
+        }
+        break;
+        #endregion
 	}
 	
 	if (_start_menu_id != menu_id)

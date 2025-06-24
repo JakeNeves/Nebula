@@ -1,0 +1,1 @@
+sprite_index = spr_scarred_quadlash_idle;

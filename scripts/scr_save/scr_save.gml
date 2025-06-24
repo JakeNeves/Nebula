@@ -4,6 +4,12 @@ function save_area() {
 	}
 	
 	switch (room) {
+        #region Gallahard Fields
+        case rm_fields_1:
+            global.area_data.fields_1 = _area_struct;
+            break;
+        #endregion
+        
 		#region Mines of Gallahard
 		case rm_mines_1:
 			global.area_data.mines_1 = _area_struct;
@@ -24,9 +30,6 @@ function save_area() {
 			
 		#region Ashpit
 		case rm_ashpit_1:
-			global.area_data.ashpit_1 = _area_struct;
-			break;
-		case rm_ashpit_2:
 			global.area_data.ashpit_1 = _area_struct;
 			break;
 		#endregion
@@ -37,6 +40,12 @@ function load_area() {
 	var _area_struct = 0;
 	
 	switch (room) {
+        #region Gallahard Fields
+        case rm_fields_1:
+            global.area_data.fields_1 = _area_struct;
+            break;
+        #endregion
+        
 		#region Mines of Gallahard
 		case rm_mines_1:
 			global.area_data.mines_1 = _area_struct;
@@ -59,9 +68,6 @@ function load_area() {
 		case rm_ashpit_1:
 			global.area_data.ashpit_1 = _area_struct;
 			break;
-		case rm_ashpit_2:
-			global.area_data.ashpit_1 = _area_struct;
-			break;
 		#endregion
 	}
 	
@@ -69,6 +75,7 @@ function load_area() {
 		exit;
 }
 
+// @param _file_num
 function save_game(_file_num = 0) {
 	var _save = array_create(0);
 	
@@ -77,9 +84,18 @@ function save_game(_file_num = 0) {
 	global.player_data.save_x = obj_mainchara.x;
 	global.player_data.save_y = obj_mainchara.y;
 	global.player_data.save_room = room_get_name(room);
-	
+    
 	global.player_data.route = global.route_type;
 	global.player_data.difficulty = global.difficulty;
+    
+    global.player_data.damage = obj_mainchara.plr_damage;
+    global.player_data.level = obj_mainchara.lv;
+    global.player_data.xp = obj_mainchara.xp;
+    global.player_data.xp_req = obj_mainchara.xp_req;
+    global.player_data.hp = obj_mainchara.plr_hp;
+    global.player_data.hp_max = obj_mainchara.plr_hp_max;
+    
+    global.player_data.money = obj_mainchara.money;
 	
 	array_push(_save, global.player_data);
 	array_push(_save, global.area_data);
@@ -94,6 +110,7 @@ function save_game(_file_num = 0) {
 	buffer_delete(_buff);
 }
 
+// @param _file_num
 function load_game(_file_num = 0) {
 	var _savefile = "game_savedata_" + string(_file_num) + ".sav";
 	
@@ -111,6 +128,15 @@ function load_game(_file_num = 0) {
 	
 	global.route_type = global.player_data.route;
 	global.difficulty = global.player_data.difficulty;
+    
+    obj_mainchara.plr_damage = global.player_data.damage;
+    obj_mainchara.lv = global.player_data.level;
+    obj_mainchara.xp = global.player_data.xp;
+    obj_mainchara.xp_req = global.player_data.xp_req;
+    obj_mainchara.plr_hp = global.player_data.hp;
+    obj_mainchara.plr_hp_max = global.player_data.hp_max;
+    
+    obj_mainchara.money = global.player_data.money;
 	
 	var _load_area = asset_get_index(global.player_data.save_room);
 	room_goto(_load_area);

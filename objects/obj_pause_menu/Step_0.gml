@@ -18,26 +18,25 @@ if (pos < 0)
 if (_key_action) {
 	
 	var _start_menu_id = menu_id;
+    audio_play_sound(snd_select, 0, false);
 	
 	switch (menu_id) {
 		case 0:
 			switch (pos) {
 			case 0:
-				audio_play_sound(snd_select, 0, false);
+                with (all)
+                    image_speed = obj_game_settings.game_paused_img_spd;
 				instance_destroy();
 				break;
 	
 			case 1:
-				audio_play_sound(snd_select, 0, false);
 				menu_id = 1;
 				break;
 	
 			case 2:
-				audio_play_sound(snd_select, 0, false);
 				break;
 	
 			case 3:
-				audio_play_sound(snd_select, 0, false);
 				instance_destroy();
 				if (instance_exists(obj_mainchara))
 					instance_destroy(obj_mainchara);
@@ -51,30 +50,15 @@ if (_key_action) {
 		case 1:
 			switch (pos) {
 			case 0:
-				audio_play_sound(snd_select, 0, false);
 				break;
 	
 			case 1:
-				audio_play_sound(snd_select, 0, false);
 				break;
 	
 			case 2:
-				audio_play_sound(snd_select, 0, false);
-				break;
-	
-			case 3:
-				audio_play_sound(snd_select, 0, false);
-				if (!global.is_debug_mode_enabled) {
-					global.is_debug_mode_enabled = true;
-					show_debug_log(true);
-				} else {
-					global.is_debug_mode_enabled = false;
-					show_debug_log(false);
-				}
 				break;
 				
-			case 4:
-				audio_play_sound(snd_select, 0, false);
+			case 3:
 				menu_id = 0;
 				break;
 			}

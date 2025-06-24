@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_gungir_shoot",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":512,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.714286,
+  "name":"snd_gungir_shoot",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Sounds/Player.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_gungir_shoot.ogg",
+  "type":0,
+  "volume":1.0,
+}

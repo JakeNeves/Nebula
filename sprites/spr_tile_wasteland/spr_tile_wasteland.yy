@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_tile_wasteland",
   "bboxMode":0,
-  "bbox_bottom":79,
+  "bbox_bottom":95,
   "bbox_left":16,
-  "bbox_right":127,
+  "bbox_right":159,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"dac720c0-729f-419d-9909-fe43afd62734","name":"dac720c0-729f-419d-9909-fe43afd62734","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"eb0efd70-be97-4ded-9a65-11d505040c49","name":"eb0efd70-be97-4ded-9a65-11d505040c49","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":224,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"0055a785-03e0-4a8e-856e-b7750c4e626b","blendMode":0,"displayName":"default","isLocked":false,"name":"0055a785-03e0-4a8e-856e-b7750c4e626b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d608b3f6-46a7-4868-9f43-f8a5d7029eab","blendMode":0,"displayName":"default","isLocked":false,"name":"d608b3f6-46a7-4868-9f43-f8a5d7029eab","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tile_wasteland",
   "nineSlice":null,
@@ -32,7 +32,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_tile_wasteland",
     "autoRecord":true,
     "backdropHeight":768,
@@ -68,9 +68,7 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dac720c0-729f-419d-9909-fe43afd62734","path":"sprites/spr_tile_wasteland/spr_tile_wasteland.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d7cd52b5-ade7-45ef-8475-f10325da5ca2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"eb0efd70-be97-4ded-9a65-11d505040c49","path":"sprites/spr_tile_wasteland/spr_tile_wasteland.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cc276793-c383-4d85-a15a-ad05c2904ea1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

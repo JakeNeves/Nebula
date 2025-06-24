@@ -4,20 +4,12 @@ switch (room) {
 	case rm_menu:
 		set_music_ingame(snd_mus_menu, 30, 0);
 	break
-	
-	case rm_menu_sylux:
-		set_music_ingame(snd_mus_menu_sylux, 30, 0);
-	break
-	
-	#region Test Rooms
-	case rm_test1:
-		set_music_ingame(noone, 30, 0);
-	break;
-	
-	case rm_test2:
-		set_music_ingame(noone, 30, 0);
-	break;
-	#endregion
+    
+    #region Red Rooms
+    case rm_rr_1:
+        set_music_ingame(snd_mus_red_room, 30, 0);
+    break;
+    #endregion
 	
 	#region Mines of Gallahard
 	#region Mines Enterances
@@ -77,7 +69,7 @@ switch (room) {
 	#endregion
 	
 	#region Bloodpoke Wasteland
-	case rm_wasteland:
+	case rm_wasteland_1:
 		if (music_chance < 3)
 			set_music_ingame(snd_mus_wasteland, 30, 0);
 		else
@@ -118,4 +110,8 @@ switch (room) {
 	
 	#region Forest
 	#endregion
+    
+    default:
+        set_music_ingame(noone, 30, 0);
+    break;
 }

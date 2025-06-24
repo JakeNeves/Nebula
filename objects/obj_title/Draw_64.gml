@@ -1,1 +1,0 @@
-draw_text_transformed_color(x + window_get_x(), y + window_get_y(), title, 4, 4, 0, color1, color2, color3, color4, text_alpha);

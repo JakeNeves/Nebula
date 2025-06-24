@@ -1,18 +1,12 @@
 /// @description Toggles Noclip.
 function noclip() {
-	if (!global.no_clip) {
+	if (!obj_mainchara.plr_noclip) {
 		show_debug_message("Noclip is enabled");
-		global.no_clip = true;
-		with(obj_collidable) {
-			solid = false;
-		}
+		obj_mainchara.plr_noclip = true;
 	}
 	else {
 		show_debug_message("Noclip is disabled");
-		global.no_clip = false;
-		with(obj_collidable) {
-			solid = true;
-		}
+		obj_mainchara.plr_noclip = false;
 	}
 }
 
@@ -57,4 +51,18 @@ function set_neutral_route_count(_count = 0) {
 		global.neutral_endings_completed = 0;
 	else
 		global.neutral_endings_completed = _count;
+}
+
+function add_to_wallet(_money) {
+	global.money += _money;
+	show_debug_message("You've been given " + _money + ", now you have $" + global.money + " in your wallet!");
+}
+
+function spawn(_entity = 0) {
+    if (_entity != noone) {
+        instance_create_depth((obj_mainchara.x + random_range(-150, 150)), (obj_mainchara.y + random_range(-150, 150)), obj_mainchara.depth, _entity);
+        show_debug_message("Entity sucessfully spawned!");
+    }
+    else
+        show_debug_message("Unable to spawn entity, please make sure you either have typed the internal ID correctly or the entity doesn't exist.");
 }

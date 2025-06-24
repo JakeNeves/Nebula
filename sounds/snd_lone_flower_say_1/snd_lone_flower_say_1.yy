@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":10.781429,
+  "duration":5.718526,
   "name":"snd_lone_flower_say_1",
   "parent":{
     "name":"Lone Flower",
