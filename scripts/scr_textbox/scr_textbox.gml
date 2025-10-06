@@ -20,13 +20,12 @@ chara_color = {
 }
 
 chara_sound = {
-    "SYSTEM": snd_dialogue,
-    "interact": snd_dialogue,
+    "system": snd_dialogue,
     "witness": snd_dia_witness,
-    "Jake": snd_dia_jake,
-    "Arizel": snd_dia_arizel,
-    "Sylux": snd_dia_sylux,
-    "Vortex": snd_dia_vortex,
-    "August": snd_dia_august,
-    "Sebastian": snd_dia_sebastian
+    "jake": snd_dia_jake,
+    "arizel": snd_dia_arizel,
+    "sylux": snd_dia_sylux,
+    "vortex": snd_dia_vortex,
+    "august": snd_dia_august,
+    "sebastian": snd_dia_sebastian
 }

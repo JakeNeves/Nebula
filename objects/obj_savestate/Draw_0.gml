@@ -1,3 +1,5 @@
+draw_shadow(8);
+
 draw_self();
 
 if (can_interact && !instance_exists(obj_textbox)) {

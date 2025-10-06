@@ -1,7 +1,9 @@
 {
   "$GMTileSet":"v1",
   "%Name":"tset_mausoleum_flowerbed",
-  "autoTileSets":[],
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"autotile","closed_edge":true,"name":"autotile","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[9,0,0,2,0,8,0,1,0,0,10,3,16,15,17,0,],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,

@@ -15,8 +15,8 @@
   "name":"obj_enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPC",
-    "path":"folders/Objects/NPC.yy",
+    "name":"Manager",
+    "path":"folders/Objects/Manager.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -52,6 +52,34 @@
     {"$GMObjectProperty":"v1","%Name":"bleeds","filters":[],"listItems":[],"multiselect":false,"name":"bleeds","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"drops_medkit","filters":[],"listItems":[],"multiselect":false,"name":"drops_medkit","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"drops_money","filters":[],"listItems":[],"multiselect":false,"name":"drops_money","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"directional_animations","filters":[],"listItems":[],"multiselect":false,"name":"directional_animations","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"stand_south_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_south_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"move_south_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"move_south_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"stand_north_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_north_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"move_north_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"move_north_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"horizontal_animations","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"horizontal_animations","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"stand_west_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_west_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"move_west_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"move_west_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"stand_east_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_east_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"move_east_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"move_east_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

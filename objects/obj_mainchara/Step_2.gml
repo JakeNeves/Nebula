@@ -1,8 +1,3 @@
-with (all) {
-    if (!on_ui_layer)
-        depth = -bbox_bottom;
-}
-
 var _camera = view_camera[0];
 
 var _camera_width = camera_get_view_width(_camera);

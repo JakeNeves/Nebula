@@ -1,0 +1,1 @@
+draw_text_transformed_color(x, y, splash, 2, 2, 15, c_aqua, c_aqua, c_aqua, c_aqua, 1);

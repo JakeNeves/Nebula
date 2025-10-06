@@ -18,6 +18,10 @@ if (alarm[0] < 0 && other.dmg > 0) {
     
     if (random(3)) {
         audio_play_sound(snd_blood, 8, false, 1, 0, random_range(0.9, 1.05));
-        var _blood = instance_create_depth(x + random_range(-16, 16), y + random_range(-16, 16), 999, obj_effect_blood);
+        
+        var _blood = instance_create_depth(x + random_range(-8, 8), y + random_range(-8, 8), 999, obj_effect_blood);
+        
+        for (var _i = 0; _i < random_range(4, 8); _i++)
+            var _blood_effect = instance_create_depth(x + random_range(-8, 8), y + random_range(-8, 8), random_range(-999, 999), obj_effect_explode_blood);
     }
 }

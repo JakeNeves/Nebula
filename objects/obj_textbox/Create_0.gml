@@ -1,4 +1,4 @@
-dialogue = [];
+adialogue = [];
 
 cur_dia = -1;
 cur_chara = 0;

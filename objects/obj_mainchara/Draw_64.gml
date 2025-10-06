@@ -23,5 +23,12 @@ _dy += _bary + 12;
 draw_sprite_stretched(spr_money_base, 0, _dx, _dy, _barx / 2, _bary);
 draw_text_transformed(_dx + _barx / 3, _dy + _bary / 2.5, $"{money}", 2, 2, 0);
 
+if (keys >= 1) {
+    var _keys = _barx * (keys);
+    _dy += _bary + 12;
+    draw_sprite_stretched(spr_keys_base, 0, _dx, _dy, _barx / 2, _bary); 
+    draw_text_transformed(_dx + _barx / 3, _dy + _bary / 3, $"{keys}", 2, 2, 0);
+}
+  
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

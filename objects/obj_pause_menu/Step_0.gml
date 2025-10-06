@@ -1,7 +1,16 @@
-var _key_up = keyboard_check_pressed(ord("W")) || gamepad_button_check(gamepad_get_device_count(), gp_padu);
-var _key_down = keyboard_check_pressed(ord("S")) || gamepad_button_check(gamepad_get_device_count(), gp_padd);
+var _key_up = keyboard_check_pressed(ord("W"));
+var _key_down = keyboard_check_pressed(ord("S"));
 
-var _key_action = keyboard_check_pressed(vk_space) || gamepad_button_check(gamepad_get_device_count(), gp_face1);
+var _key_action = keyboard_check_pressed(vk_space);
+
+var _gamepad = global.main_gamepad;
+
+if (_gamepad != undefined) {
+    _key_up = real(gamepad_button_check_pressed(_gamepad, gp_padu));
+    _key_down = real(gamepad_button_check_pressed(_gamepad, gp_padd));
+
+    _key_action = real(gamepad_button_check_pressed(_gamepad, gp_face1));
+}
 
 op_length = array_length(option[menu_id]);
 
@@ -24,8 +33,6 @@ if (_key_action) {
 		case 0:
 			switch (pos) {
 			case 0:
-                with (all)
-                    image_speed = obj_game_settings.game_paused_img_spd;
 				instance_destroy();
 				break;
 	
@@ -38,10 +45,6 @@ if (_key_action) {
 	
 			case 3:
 				instance_destroy();
-				if (instance_exists(obj_mainchara))
-					instance_destroy(obj_mainchara);
-				if (instance_exists(obj_mainchara_plat))
-					instance_destroy(obj_mainchara_plat);
 				room_goto(rm_menu);
 				break;
 			}

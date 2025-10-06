@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_test_chaser",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_test_chaser",
   "overriddenProperties":[
@@ -11,6 +9,14 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"stun_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_stunned","path":"sprites/spr_sylux_stunned/spr_sylux_stunned.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_stunned",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"dmg","path":"objects/obj_chaser/obj_chaser.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"follow_range","path":"objects/obj_chaser/obj_chaser.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"stand_north_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_stand_north","path":"sprites/spr_sylux_stand_north/spr_sylux_stand_north.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_stand_north",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"walk_north_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_walk_north","path":"sprites/spr_sylux_walk_north/spr_sylux_walk_north.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_walk_north",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"stand_south_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_stand_south","path":"sprites/spr_sylux_stand_south/spr_sylux_stand_south.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_stand_south",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"walk_south_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_walk_south","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_walk_south",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"stand_east_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_stand_east","path":"sprites/spr_sylux_stand_east/spr_sylux_stand_east.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_stand_east",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"walk_east_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_walk_east","path":"sprites/spr_sylux_walk_east/spr_sylux_walk_east.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_walk_east",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"stand_west_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_stand_west","path":"sprites/spr_sylux_stand_west/spr_sylux_stand_west.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_stand_west",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_chaser","path":"objects/obj_chaser/obj_chaser.yy",},"propertyId":{"name":"walk_west_sprite","path":"objects/obj_chaser/obj_chaser.yy",},"resource":{"name":"spr_sylux_walk_west","path":"sprites/spr_sylux_walk_west/spr_sylux_walk_west.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_sylux_walk_west",},
   ],
   "parent":{
     "name":"Test",
@@ -38,8 +44,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sylux_walk_south",
-    "path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",
+    "name":"spr_sylux_stand_south",
+    "path":"sprites/spr_sylux_stand_south/spr_sylux_stand_south.yy",
   },
   "spriteMaskId":null,
   "visible":true,

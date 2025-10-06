@@ -13,8 +13,8 @@
   "name":"obj_chaser",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPC",
-    "path":"folders/Objects/NPC.yy",
+    "name":"Manager",
+    "path":"folders/Objects/Manager.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,11 +33,35 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"dmg","filters":[],"listItems":[],"multiselect":false,"name":"dmg","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"10","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"follow_range","filters":[],"listItems":[],"multiselect":false,"name":"follow_range","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"250","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"movement_speed","filters":[],"listItems":[],"multiselect":false,"name":"movement_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"movement_speed","filters":[],"listItems":[],"multiselect":false,"name":"movement_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"stun_time","filters":[],"listItems":[],"multiselect":false,"name":"stun_time","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"15","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"stun_sprite","filters":[
         "GMSprite",
       ],"listItems":[],"multiselect":false,"name":"stun_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"stand_north_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_north_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"walk_north_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"walk_north_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"stand_south_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_south_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"walk_south_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"walk_south_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"stand_east_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_east_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"walk_east_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"walk_east_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"stand_west_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"stand_west_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"walk_west_sprite","filters":[
+        "GMSprite",
+      ],"listItems":[],"multiselect":false,"name":"walk_west_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

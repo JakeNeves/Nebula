@@ -9,7 +9,7 @@
   "bitRate":512,
   "compression":0,
   "conversionMode":0,
-  "duration":184.61537,
+  "duration":238.93333,
   "name":"snd_mus_mausoleum",
   "parent":{
     "name":"Music",

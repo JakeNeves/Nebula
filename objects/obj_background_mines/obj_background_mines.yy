@@ -12,7 +12,10 @@
     "name":"Background",
     "path":"folders/Objects/Environment/Background.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_background",
+    "path":"objects/obj_background/obj_background.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

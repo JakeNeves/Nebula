@@ -10,8 +10,8 @@
     "path":"folders/Objects/Environment/Mines.yy",
   },
   "parentObjectId":{
-    "name":"obj_decoration_collidable",
-    "path":"objects/obj_decoration_collidable/obj_decoration_collidable.yy",
+    "name":"obj_collidable",
+    "path":"objects/obj_collidable/obj_collidable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

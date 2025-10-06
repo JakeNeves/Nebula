@@ -10,7 +10,7 @@ _dy += 16;
 
 draw_set_font(global.main_font);
 
-var _name = dialogue[cur_dia].chara;
+var _name = dialogue[cur_dia].dia_chara;
 
 if (_name != noone)
     draw_set_color(global.chara_color[$ _name]);

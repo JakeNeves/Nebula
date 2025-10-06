@@ -6,6 +6,7 @@ instance_create_depth(x, y, depth, obj_stat_persist, {
     stat_hp: plr_hp,
     stat_hp_max: plr_hp_max,
     stat_money: money,
-    plr_x: obj_mainchara.x,
-    plr_y: obj_mainchara.y
+    pos_x: x,
+    pos_y: y,
+    plr_dir: direction
 });

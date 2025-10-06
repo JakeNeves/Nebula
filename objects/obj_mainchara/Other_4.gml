@@ -6,6 +6,9 @@ with (obj_stat_persist) {
     other.plr_hp = stat_hp;
     other.plr_hp_max = stat_hp_max;
     other.money = stat_money;
+    other.x = pos_x;
+    other.y = pos_y;
+    other.direction = plr_dir;
     
     instance_destroy();
 }

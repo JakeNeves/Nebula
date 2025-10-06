@@ -6,8 +6,8 @@
   "name":"obj_collidable",
   "overriddenProperties":[],
   "parent":{
-    "name":"Manager",
-    "path":"folders/Objects/Manager.yy",
+    "name":"Dummy",
+    "path":"folders/Objects/Dummy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

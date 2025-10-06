@@ -9,7 +9,7 @@
   "bitRate":512,
   "compression":0,
   "conversionMode":0,
-  "duration":0.12322,
+  "duration":0.14657596,
   "name":"snd_blood",
   "parent":{
     "name":"Misc",

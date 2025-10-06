@@ -21,6 +21,10 @@ switch (room) {
 	case rm_mines_1:
 		set_music_ingame(snd_mus_mines, 30, 0);
 	break;
+    
+	case rm_mines_2:
+		set_music_ingame(snd_mus_mines, 30, 0);
+	break;
 	#endregion
 	
 	#region Dark Mines of Gallahard
@@ -47,6 +51,9 @@ switch (room) {
 	break;
 	
 	case rm_ashpit_1:
+		set_music_ingame(snd_mus_ashpit, 30, 0);
+	break;
+	case rm_ashpit_2:
 		set_music_ingame(snd_mus_ashpit, 30, 0);
 	break;
 	#endregion
@@ -81,12 +88,11 @@ switch (room) {
 	#endregion
 	
 	#region Mausoleum
-	case rm_mausoleum_enterance:
-		set_music_ingame(noone, 30, 0);
-	break;
-	
 	case rm_mausoleum_1:
-		set_music_ingame(snd_mus_mausoleum, 60, 60);
+		set_music_ingame(snd_mus_mausoleum, 60, 0);
+	break;
+	case rm_mausoleum_2:
+		set_music_ingame(snd_mus_mausoleum, 60, 0);
 	break;
 	#endregion
 	
@@ -94,11 +100,14 @@ switch (room) {
 	case rm_void_1:
 		set_music_ingame(snd_mus_void_1, 30, 0);
 	break;
+	case rm_void_2:
+		set_music_ingame(snd_mus_void_1, 30, 0);
+	break;
 	#endregion
 	
 	#region Fields
 	case rm_fields_1:
-		set_music_ingame(snd_mus_oridon, 30, 0);
+		set_music_ingame(snd_mus_fields, 30, 0);
 	break;
 	#endregion
 	
@@ -110,6 +119,12 @@ switch (room) {
 	
 	#region Forest
 	#endregion
+    
+    #region Cesspool
+	case rm_cesspool_1:
+		set_music_ingame(snd_mus_cesspool, 30, 0);
+    break;
+    #endregion
     
     default:
         set_music_ingame(noone, 30, 0);

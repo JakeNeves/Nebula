@@ -7,6 +7,7 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"heals_player","path":"objects/obj_pickup/obj_pickup.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"heal_rate","path":"objects/obj_pickup/obj_pickup.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"pickup_sound","path":"objects/obj_pickup/obj_pickup.yy",},"resource":{"name":"snd_medkit_pickup","path":"sounds/snd_medkit_pickup/snd_medkit_pickup.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snd_medkit_pickup",},
   ],
   "parent":{
     "name":"Pickup",

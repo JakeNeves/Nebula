@@ -1,7 +1,5 @@
 function save_area() {
-	var _area_struct = {
-		
-	}
+	var _area_struct = { }
 	
 	switch (room) {
         #region Gallahard Fields
@@ -88,12 +86,12 @@ function save_game(_file_num = 0) {
 	global.player_data.route = global.route_type;
 	global.player_data.difficulty = global.difficulty;
     
-    global.player_data.damage = obj_mainchara.plr_damage;
-    global.player_data.level = obj_mainchara.lv;
-    global.player_data.xp = obj_mainchara.xp;
-    global.player_data.xp_req = obj_mainchara.xp_req;
-    global.player_data.hp = obj_mainchara.plr_hp;
-    global.player_data.hp_max = obj_mainchara.plr_hp_max;
+    global.player_data.stat_damage = obj_mainchara.plr_damage;
+    global.player_data.stat_level = obj_mainchara.lv;
+    global.player_data.stat_xp = obj_mainchara.xp;
+    global.player_data.stat_xp_req = obj_mainchara.xp_req;
+    global.player_data.stat_hp = obj_mainchara.plr_hp;
+    global.player_data.stat_hp_max = obj_mainchara.plr_hp_max;
     
     global.player_data.money = obj_mainchara.money;
 	
@@ -129,12 +127,12 @@ function load_game(_file_num = 0) {
 	global.route_type = global.player_data.route;
 	global.difficulty = global.player_data.difficulty;
     
-    obj_mainchara.plr_damage = global.player_data.damage;
-    obj_mainchara.lv = global.player_data.level;
-    obj_mainchara.xp = global.player_data.xp;
-    obj_mainchara.xp_req = global.player_data.xp_req;
-    obj_mainchara.plr_hp = global.player_data.hp;
-    obj_mainchara.plr_hp_max = global.player_data.hp_max;
+    obj_mainchara.plr_damage = global.player_data.stat_damage;
+    obj_mainchara.lv = global.player_data.stat_level;
+    obj_mainchara.xp = global.player_data.stat_xp;
+    obj_mainchara.xp_req = global.player_data.stat_xp_req;
+    obj_mainchara.plr_hp = global.player_data.stat_hp;
+    obj_mainchara.plr_hp_max = global.player_data.stat_hp_max;
     
     obj_mainchara.money = global.player_data.money;
 	

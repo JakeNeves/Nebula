@@ -9,7 +9,7 @@
   "bitRate":512,
   "compression":0,
   "conversionMode":0,
-  "duration":1.134535,
+  "duration":1.1345352,
   "name":"snd_gun_fire",
   "parent":{
     "name":"Player",

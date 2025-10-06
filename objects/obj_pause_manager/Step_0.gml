@@ -1,5 +1,13 @@
-if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
-    is_paused = !is_paused;
-    
-    update_pause_menu();
+var _key_pause = real(keyboard_check_pressed(vk_escape));
+
+var _gamepad = global.main_gamepad;
+
+if (_gamepad != undefined)
+    _key_pause = real(gamepad_button_check(_gamepad, gp_start));
+
+if (_key_pause) {
+    if (!instance_exists(obj_pause_menu))
+        instance_create_depth(x, y, depth, obj_pause_menu);
+    else
+        instance_destroy(obj_pause_menu);
 }

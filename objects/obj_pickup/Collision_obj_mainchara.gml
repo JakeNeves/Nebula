@@ -11,4 +11,7 @@ if (heals_player && !restores_full_health) {
         other.plr_hp = other.plr_hp_max;
 }
 
+if (keys_to_add > 0)
+    other.add_keys(keys_to_add);
+
 instance_destroy();

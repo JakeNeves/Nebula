@@ -2,8 +2,8 @@ window_width = window_get_width();
 window_height = window_get_height();
 
 plr_speed = 0;
-plr_walk_speed = 1;
-plr_sprint_speed = 3;
+plr_walk_speed = 2;
+plr_sprint_speed = 4;
 
 plr_direction = 0;
 
@@ -20,12 +20,18 @@ xp_req = 100;
 money = 0;
 money_max = 9999999;
 
+keys = 0;
+keys_max = 999;
+
 regen_rate = 1;
 regen_time_max = 60;
 regen_time = regen_time_max;
 can_regenerate_hp = false;
 
 plr_noclip = false;
+
+fire_delay = 16;
+fire_count = fire_delay;
 
 hit_sound = [ // a variety of hit sounds
     snd_player_damage_1,
@@ -38,6 +44,24 @@ hit_sound = [ // a variety of hit sounds
 /// @param _count The amount of money to add 
 function add_money(_count) {
     money += _count;
+}
+
+/// @desc Removes a specified amount of money to the player's balance.
+/// @param _count The amount of money to remove 
+function remove_money(_count) {
+    money -= _count;
+}
+
+/// @desc Adds a specified amount of keys to the player's key count.
+/// @param _count The amount of keys to add 
+function add_keys(_count) {
+    keys += _count;
+}
+
+/// @desc Removes a specified amount of keys to the player's key count.
+/// @param _count The amount of keys to remove
+function remove_keys(_count) {
+    keys -= _count;
 }
 
 /// @desc Gives the player an amout of XP that is speciefied, when the player reaches the maximum XP gained, they will level up and the amount of XP for the next level will multiplied by 1.5.
@@ -58,7 +82,8 @@ function add_xp(_xp) {
         
         create_dialogue([
         {
-            chara: "SYSTEM",
+            dia_chara: "SYSTEM",
+            dia_sound: "system",
             dia_text: $"LEVEL UP\nYou've just advanced to LV {lv}! HP + DMG up!"
         }
         ])

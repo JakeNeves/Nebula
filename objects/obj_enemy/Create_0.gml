@@ -1,6 +1,8 @@
 target_x = x;
 target_y = y;
 
+npc_dir = 0;
+
 alarm[0] = 60;
 
 collidable_map = layer_tilemap_get_id("Collidable");

@@ -9,10 +9,7 @@
     "name":"Wasteland",
     "path":"folders/Objects/Environment/Wasteland.yy",
   },
-  "parentObjectId":{
-    "name":"obj_decoration_collidable",
-    "path":"objects/obj_decoration_collidable/obj_decoration_collidable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

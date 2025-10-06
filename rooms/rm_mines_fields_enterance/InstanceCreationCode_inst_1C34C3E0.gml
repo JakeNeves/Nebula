@@ -1,5 +1,5 @@
-target_x = 320;
-target_y = 992;
+target_x = 848;
+target_y = 496;
 
 target_room = rm_fields_1;
 

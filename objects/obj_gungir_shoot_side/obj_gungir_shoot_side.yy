@@ -12,7 +12,10 @@
     "name":"Projectile",
     "path":"folders/Objects/Projectile.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_mainchara_attack",
+    "path":"objects/obj_mainchara_attack/obj_mainchara_attack.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

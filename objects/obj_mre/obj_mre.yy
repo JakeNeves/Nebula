@@ -6,6 +6,7 @@
   "name":"obj_mre",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"restores_full_health","path":"objects/obj_pickup/obj_pickup.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_pickup","path":"objects/obj_pickup/obj_pickup.yy",},"propertyId":{"name":"pickup_sound","path":"objects/obj_pickup/obj_pickup.yy",},"resource":{"name":"snd_mre_pickup","path":"sounds/snd_mre_pickup/snd_mre_pickup.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snd_mre_pickup",},
   ],
   "parent":{
     "name":"Pickup",

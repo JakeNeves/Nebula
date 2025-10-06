@@ -3,7 +3,7 @@ if (instance_exists(obj_textbox))
 
 var _gamepad = global.main_gamepad;
 
-var _key_interact = real(keyboard_check_pressed(ord("E")));
+var _key_interact = real(keyboard_check_pressed(ord("F")));
 
 if (_gamepad != undefined)
     _key_interact = real(gamepad_button_check_pressed(_gamepad, gp_face4));
@@ -24,6 +24,14 @@ if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < 6) {
             }
             else
                 obj_textbox.can_goto_next_room = true;
+        }
+    
+        if (execute_event)
+        {
+            if (event_id == noone)
+                show_debug_message("EVENT ID ERROR >> Check Event ID or execute an existing event!");
+            else
+                script_execute(event_id);
         }
     }
 }

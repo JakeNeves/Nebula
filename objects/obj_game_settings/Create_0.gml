@@ -10,9 +10,6 @@ room_goto(INIT_ROOM);
 global.blood_and_gore = true;
 global.is_debug_mode_enabled = false;
 
-global.main_quest = false;
-global.side_quest = false;
-
 #region Key Items
 global.has_masters_key = false;
 #endregion

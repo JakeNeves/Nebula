@@ -6,8 +6,8 @@
   "name":"obj_stat_persist",
   "overriddenProperties":[],
   "parent":{
-    "name":"Manager",
-    "path":"folders/Objects/Manager.yy",
+    "name":"Dummy",
+    "path":"folders/Objects/Dummy.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -1,21 +1,16 @@
-/*if (keyboard_check_pressed(vk_escape) || gamepad_button_check(0, gp_start) && room != rm_menu) {
-	global.game_paused = !global.game_paused;
-	
-	if (global.game_paused) {
-		with (all) {
-			other.game_paused_img_spd = image_speed;
-			image_speed = 0;
-		}
-        
-        instance_create_depth(x, y, -999, obj_pause_menu);
-	}
-	else {
-		with (all) 
-			image_speed = other.game_paused_img_spd;
-        
-        instance_destroy(obj_pause_menu);
-	}
-}*/
+with (all) {
+    if (!on_ui_layer)
+        depth = -bbox_bottom;
+}
+
+var _gamepad = global.main_gamepad;
+
+
+if (_gamepad != undefined) {
+    _key_pause = real(gamepad_button_check_pressed(_gamepad, gp_start));
+}
+
+
 
 if (keyboard_check_pressed(vk_f11)) {
     window_set_fullscreen(!window_get_fullscreen());

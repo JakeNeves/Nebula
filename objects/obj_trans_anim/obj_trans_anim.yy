@@ -11,8 +11,8 @@
   "name":"obj_trans_anim",
   "overriddenProperties":[],
   "parent":{
-    "name":"Manager",
-    "path":"folders/Objects/Manager.yy",
+    "name":"Dummy",
+    "path":"folders/Objects/Dummy.yy",
   },
   "parentObjectId":{
     "name":"obj_pause_manager",

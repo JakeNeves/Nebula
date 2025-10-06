@@ -1,5 +1,5 @@
 target_x = 400;
-target_y = 576
+target_y = 560
 
 target_room = rm_ashpit_1
 
