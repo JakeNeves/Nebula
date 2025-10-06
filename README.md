@@ -7,6 +7,9 @@ A game by Jake Neves
 No functional build of the game is available right now, once there is, there should
 be a build ready, other than the old Haxe-Flixel prototype builds.
 
+Feel free to contribute some music, art, code, etc., the game is being developed
+with GameMaker!
+
 ---
 
 ## The Game
@@ -26,7 +29,7 @@ be a build ready, other than the old Haxe-Flixel prototype builds.
 
 # Plot
 
-You play as Emperor Jake I of Gallahard, as you wake up from a 2 year comba, only to find out that your homeland, the Gallahard Empire has laid to ruin and collaped by the tyrannical demon overlord, Sylux! Journey through the empire as Emperor Jake I tries to fight back against the demon overlord and his forces, with a hint of unexpected twists such as switching from a simple top-down RPG to a platformer with some crazy mechanics, or even a shmup! Do you have the wits to take on the tyrant and save Gallahard?
+You play as Emperor Jake I of Gallahard, as you wake up from a 2 year comba, only to find out that your homeland, the Gallahard Empire has laid to ruin and collaped by the tyrannical demon overlord, Sylux! Journey through the empire as Emperor Jake I tries to fight back against the demon overlord and his forces, with a hint of unexpected twists! Do you have the wits to take on the tyrant and save Gallahard?
 
 ---
 
@@ -83,5 +86,6 @@ You can follow the devs' medias here!
 * Twitter - [@realjaketem](https://twitter.com/realjaketem)
 * YouTube - [Jake Neves](https://youtube.com/@realjaketem)
 * Reddit - [u/realjaketem](https://reddit.com/user/realjaketem)
+* Bluesky - [@realjaketem.bsky.social](https://bsky.app/profile/realjaketem.bsky.social)
 
 [![Discord](https://img.shields.io/discord/339097562814611456?label=Jake's%20Lounge%20Discord%20Server)](https://discord.gg/HUJ8KUSAjC)
