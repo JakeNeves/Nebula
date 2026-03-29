@@ -6,8 +6,8 @@
   "name":"obj_screen",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPC",
-    "path":"folders/Objects/NPC.yy",
+    "name":"Lab",
+    "path":"folders/Objects/Environment/Lab.yy",
   },
   "parentObjectId":null,
   "persistent":false,

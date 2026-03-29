@@ -1,0 +1,1 @@
+sprite_index = spr_silver_grimace_idle;

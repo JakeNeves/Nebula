@@ -24,15 +24,16 @@ var _plr_sprint = keyboard_check(vk_shift)
 var _key_attack = real(keyboard_check(ord("C")));
 var _key_shoot = real(keyboard_check(ord("V")));
 
+/// Controller Support Stuff!
 var _gamepad = global.main_gamepad;
-
 if (_gamepad != undefined) {
-    _plr_x_input = real(gamepad_button_check(_gamepad, gp_padr) - gamepad_button_check(_gamepad, gp_padl));
+    _key_pause = real(gamepad_button_check(_gamepad, gp_start));
+    
+    _plr_x_input = real(gamepad_button_check(_gamepad, gp_padl) - gamepad_button_check(_gamepad, gp_padr));
     _plr_y_input = real(gamepad_button_check(_gamepad, gp_padd) - gamepad_button_check(_gamepad, gp_padu));
     _plr_sprint = real(gamepad_button_check(_gamepad, gp_face3));
     _key_attack = real(gamepad_button_check(_gamepad, gp_shoulderr));
     _key_shoot = real(gamepad_button_check(_gamepad, gp_shoulderrb));
-    _key_pause = real(gamepad_button_check_pressed(_gamepad, gp_start));
 }
 
 if (plr_hp < plr_hp_max) {
@@ -65,7 +66,7 @@ if (!is_keyboard_used_debug_overlay()) {
         move_and_collide(_plr_x_input * plr_speed, _plr_y_input * plr_speed, [collidable_map, obj_collidable], undefined, undefined, undefined, plr_speed, plr_speed);
 }
 
-if (_plr_x_input != 0 || _plr_y_input != 0) {
+if (_plr_x_input != 0 || _plr_y_input != 0 && !is_keyboard_used_debug_overlay()) {
     if (_plr_y_input > 0) {
         if (_plr_sprint)
             sprite_index = spr_mainchara_run_south;

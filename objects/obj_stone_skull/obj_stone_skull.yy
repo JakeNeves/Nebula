@@ -10,8 +10,8 @@
   "name":"obj_stone_skull",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Objects/NPC/Enemy.yy",
+    "name":"Universal",
+    "path":"folders/Objects/NPC/Enemy/Universal.yy",
   },
   "parentObjectId":null,
   "persistent":false,

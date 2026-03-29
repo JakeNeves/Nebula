@@ -1,15 +1,15 @@
 var _key_up = real(keyboard_check_pressed(ord("W")));
 var _key_down = real(keyboard_check_pressed(ord("S")));
 
-var _key_action = real(keyboard_check_pressed(vk_space))
+var _key_action = real(keyboard_check_pressed(vk_space));
 
+/// Controller Support Stuff!
 var _gamepad = global.main_gamepad;
-
 if (_gamepad != undefined) {
-    _key_up = real(gamepad_button_check_pressed(_gamepad, gp_padu));
-    _key_down = real(gamepad_button_check_pressed(_gamepad, gp_padd));
-
-    _key_action = real(gamepad_button_check_pressed(_gamepad, gp_face1));
+    _key_up = real(gamepad_button_check(_gamepad, gp_padu));
+    _key_down = real(gamepad_button_check(_gamepad, gp_padd));
+    
+    _key_action = real(gamepad_button_check(_gamepad, gp_face1));
 }
 
 op_length = array_length(option[menu_id]);
@@ -22,8 +22,17 @@ if (pos >= op_length)
 	
 if (pos < 0)
 	pos = op_length - 1;
-	
-	
+
+if (global.music_volume == 1)
+    option[1, 1] = "Music: ON";
+else
+    option[1, 1] = "Music: OFF";
+
+if (global.blood_and_gore == 1)
+    option[1, 2] = "Blood and Gore: ON";
+else
+    option[1, 2] = "Blood and Gore: OFF";
+
 if (_key_action) {
 	
 	var _start_menu_id = menu_id;
@@ -46,6 +55,7 @@ if (_key_action) {
 				break;
 	
 			case 3:
+                room_goto(rm_tutorial);
 				break;
 	
 			case 4:
@@ -59,15 +69,25 @@ if (_key_action) {
 		case 1:
 			switch (pos) {
 			case 0:
+                window_set_fullscreen(!window_get_fullscreen());
 				break;
 	
 			case 1:
+                if (global.music_volume == 1)
+                    global.music_volume = 0;
+                else
+                    global.music_volume = 1;
 				break;
 	
 			case 2:
+                if (global.blood_and_gore == 1)
+                    global.blood_and_gore = 0;
+                else
+                    global.blood_and_gore = 1;
 				break;
-				
+            
 			case 3:
+                save_settings();
 				menu_id = 0;
 				break;
 			}
@@ -78,27 +98,43 @@ if (_key_action) {
 		case 2:
 			switch (pos) {
 			case 0:
-				global.game_data_file = 0;
-                show_debug_message("File A - Loaded!")
-				load_game(0);
+                if (file_exists("game_savedata_0.txt")) {
+                    global.game_data_file = 0;
+                    show_debug_message("File A - Loaded!")
+				    load_game(0);
+                }
+                else
+                    option[2, 0] = "No Data";
 				break;
 	
 			case 1:
-				global.game_data_file = 1;
-                show_debug_message("File B - Loaded!")
-				load_game(1);
+                if (file_exists("game_savedata_1.txt")) {
+                    global.game_data_file = 1;
+                    show_debug_message("File B - Loaded!")
+				    load_game(1);
+                }
+                else
+                    option[2, 1] = "No Data";
 				break;
 	
 			case 2:
-				global.game_data_file = 2;
-                show_debug_message("File C - Loaded!")
-				load_game(2);
+                if (file_exists("game_savedata_2.txt")) {
+                    global.game_data_file = 2;
+                    show_debug_message("File C - Loaded!")
+				    load_game(2);
+                }
+                else
+                    option[2, 2] = "No Data";
 				break;
 	
 			case 3:
-				global.game_data_file = 3;
-                show_debug_message("File D - Loaded!")
-				load_game(3);
+                if (file_exists("game_savedata_3.txt")) {
+                    global.game_data_file = 3;
+                    show_debug_message("File D - Loaded!")
+				    load_game(3);
+                }
+                else
+                    option[2, 3] = "No Data";
 				break;
 	
 			case 4:

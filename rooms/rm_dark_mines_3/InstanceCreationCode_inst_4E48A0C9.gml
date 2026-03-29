@@ -3,4 +3,4 @@ target_y = 240;
 
 target_room = rm_ashpit_enterance;
 
-target_direction = NORTH;
+target_direction = spr_mainchara_north;

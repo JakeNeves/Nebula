@@ -5,16 +5,8 @@ with (all) {
 
 var _gamepad = global.main_gamepad;
 
-
-if (_gamepad != undefined) {
-    _key_pause = real(gamepad_button_check_pressed(_gamepad, gp_start));
-}
-
-
-
-if (keyboard_check_pressed(vk_f11)) {
+if (keyboard_check_pressed(vk_f11))
     window_set_fullscreen(!window_get_fullscreen());
-}
 
 if (keyboard_check_pressed(vk_tab)) {
 	if (!is_debug_overlay_open())
@@ -25,5 +17,5 @@ if (keyboard_check_pressed(vk_tab)) {
 	}
 }
 
-if (room != rm_menu)
+if (room != rm_menu && room != rm_intro)
     layer_set_visible("Collidable", false);

@@ -1,6 +1,6 @@
 if (alarm[1] < 0) {
     if (crit_chance <= 31) {
-        hp -= other.damage * 2;
+        hp -= other.damage * random_range(1.25, 2);
         var _crit = instance_create_depth(x + random_range(-obj_enemy.sprite_width, obj_enemy.sprite_width), y + random_range(-obj_enemy.sprite_height, obj_enemy.sprite_height), -999, obj_effect_crit);
     }
     else
@@ -26,7 +26,7 @@ if (alarm[1] < 0) {
     }
     
     /// @desc If set to "True", the enemy will bleed when attacked.
-    if (bleeds) {
+    if (bleeds && global.blood_and_gore) {
         if (random(3)) {
             audio_play_sound(snd_blood, 8, false, 1, 0, random_range(0.9, 1.05));
                     

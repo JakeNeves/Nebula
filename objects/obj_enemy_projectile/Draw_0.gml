@@ -1,3 +1,3 @@
-draw_shadow();
+draw_shadow(8);
 
 draw_self();

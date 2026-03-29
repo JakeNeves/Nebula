@@ -1,8 +1,8 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_screen",
   "bboxMode":2,
-  "bbox_bottom":31,
+  "bbox_bottom":25,
   "bbox_left":1,
   "bbox_right":30,
   "bbox_top":6,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7ed2dc61-8213-4a24-9b24-eddd637bccce","name":"7ed2dc61-8213-4a24-9b24-eddd637bccce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0dc47fc4-cd1e-4196-b921-b954c137e2d1","name":"0dc47fc4-cd1e-4196-b921-b954c137e2d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7ed2dc61-8213-4a24-9b24-eddd637bccce","name":"7ed2dc61-8213-4a24-9b24-eddd637bccce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0dc47fc4-cd1e-4196-b921-b954c137e2d1","name":"0dc47fc4-cd1e-4196-b921-b954c137e2d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -45,8 +45,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"NPC",
-    "path":"folders/Sprites/NPC.yy",
+    "name":"Lab",
+    "path":"folders/Sprites/Environment/Lab.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

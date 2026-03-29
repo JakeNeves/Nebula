@@ -1,9 +1,9 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_tile_ashpit",
   "bboxMode":0,
   "bbox_bottom":223,
-  "bbox_left":0,
+  "bbox_left":16,
   "bbox_right":223,
   "bbox_top":0,
   "collisionKind":1,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"424036da-d934-40ac-a02c-4e405b46e8de","name":"424036da-d934-40ac-a02c-4e405b46e8de","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"74f820a8-680e-4bf6-8096-c518b7127754","name":"74f820a8-680e-4bf6-8096-c518b7127754","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":224,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"8945ed75-0c8c-473a-a9aa-e8f9e65eff15","blendMode":0,"displayName":"default","isLocked":false,"name":"8945ed75-0c8c-473a-a9aa-e8f9e65eff15","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1a4e3ddc-c146-451f-826d-1bd3769abaab","blendMode":0,"displayName":"default","isLocked":false,"name":"1a4e3ddc-c146-451f-826d-1bd3769abaab","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tile_ashpit",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"424036da-d934-40ac-a02c-4e405b46e8de","path":"sprites/spr_tile_ashpit/spr_tile_ashpit.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"15d3caf2-8468-4aad-b02f-6e2104cd466f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"74f820a8-680e-4bf6-8096-c518b7127754","path":"sprites/spr_tile_ashpit/spr_tile_ashpit.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5ba8cbd2-fc6e-4756-bfce-b99db882203b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

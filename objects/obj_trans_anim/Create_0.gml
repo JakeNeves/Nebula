@@ -3,4 +3,4 @@ target_y = 0;
 
 target_room = 0;
 
-target_direction = 0;
+target_direction = sprite_index;

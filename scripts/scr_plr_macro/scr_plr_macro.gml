@@ -7,7 +7,7 @@
 
 #macro DIRECTION round(direction / 90)
 
-#macro INIT_ROOM rm_mausoleum_1
+#macro INIT_ROOM rm_menu
 
 #macro RES_X 800
 #macro RES_Y 600

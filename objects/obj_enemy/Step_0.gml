@@ -14,34 +14,54 @@ move_and_collide(_enemy_x * movement_speed, _enemy_y * movement_speed, [collidab
 if (directional_animations) {
     if (_enemy_x != 0 || _enemy_y != 0) {
         if (horizontal_animations) {
-            if (_enemy_x > 0)
+            if (_enemy_x > 0) {
                 sprite_index = move_east_sprite;
+                image_speed = 1;
+            }
     
-            if (_enemy_x < 0)
+            if (_enemy_x < 0) {
                 sprite_index = move_west_sprite;
+                image_speed = 1;
+            }
         }
     
-        if (_enemy_y > 0)
+        if (_enemy_y > 0) {
             sprite_index = move_south_sprite;
+                image_speed = 1;
+        }
     
         if (_enemy_y < 0)
-            sprite_index = move_north_sprite;
+            sprite_index = move_north_sprite; {
+                image_speed = 1;
+            }
      
         npc_dir = point_direction(0, 0, target_x, target_y);
     }
     else {
         if (horizontal_animations) {
-            if (sprite_index == move_east_sprite)
+            if (sprite_index == move_east_sprite) {
                 sprite_index = stand_east_sprite;
+                image_index = 0;
+                image_speed = 0;
+            }
     
-            if (sprite_index == move_west_sprite)
+            if (sprite_index == move_west_sprite) {
                 sprite_index = stand_west_sprite;
+                image_index = 0;
+                image_speed = 0;
+            }
         }
     
-        if (sprite_index == move_south_sprite)
+        if (sprite_index == move_south_sprite) {
             sprite_index = stand_south_sprite;
+            image_index = 0;
+            image_speed = 0;
+        }
     
-        if (sprite_index == move_north_sprite)
+        if (sprite_index == move_north_sprite) {
             sprite_index = stand_north_sprite;
+            image_index = 0;
+            image_speed = 0;
+        }
     }
 }

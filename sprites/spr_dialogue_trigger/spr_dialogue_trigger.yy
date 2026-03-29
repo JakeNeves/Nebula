@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_dialogue_trigger",
   "bboxMode":0,
   "bbox_bottom":15,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a3c8d4f9-86ba-4285-af05-164cfacee3d3","name":"a3c8d4f9-86ba-4285-af05-164cfacee3d3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a3c8d4f9-86ba-4285-af05-164cfacee3d3","name":"a3c8d4f9-86ba-4285-af05-164cfacee3d3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -42,7 +42,7 @@
     ],
     "top":1,
   },
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"Test",
     "path":"folders/Sprites/Test.yy",
@@ -96,7 +96,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":8,
     "yorigin":0,
   },
   "swatchColours":null,

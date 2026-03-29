@@ -16,7 +16,10 @@ var _xp = _barx * (xp / xp_req);
 _dy += _bary + 8;
 draw_sprite_stretched(spr_xp_base, 0, _dx, _dy, _barx, _bary);
 draw_sprite_stretched_ext(spr_xp_fill, 0, _dx, _dy, _xp, _bary, c_white, 0.6);
-draw_text_transformed(_dx + _barx / 2, _dy + _bary / 2, $"XP: {xp}/{xp_req} | LV: {lv}", 2, 2, 0);
+if (lv < 20)
+    draw_text_transformed(_dx + _barx / 2, _dy + _bary / 2, $"XP: {xp}/{xp_req} | LV: {lv}", 2, 2, 0);
+else
+    draw_text_transformed(_dx + _barx / 2, _dy + _bary / 2, $"LV: {lv}", 2, 2, 0);
 
 var _money = _barx * (money);
 _dy += _bary + 12;

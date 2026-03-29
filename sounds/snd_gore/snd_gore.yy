@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_gore",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":512,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":10,
   "conversionMode":0,
   "duration":0.912,
+  "exportDir":"",
   "name":"snd_gore",
   "parent":{
     "name":"Misc",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_gore.ogg",
-  "type":0,
   "volume":1.0,
 }

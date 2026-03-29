@@ -23,6 +23,8 @@ money_max = 9999999;
 keys = 0;
 keys_max = 999;
 
+can_take_damage = true;
+
 regen_rate = 1;
 regen_time_max = 60;
 regen_time = regen_time_max;
@@ -34,10 +36,14 @@ fire_delay = 16;
 fire_count = fire_delay;
 
 hit_sound = [ // a variety of hit sounds
-    snd_player_damage_1,
-    snd_player_damage_2,
-    snd_player_damage_3,
-    snd_player_damage_4
+    snd_player_hit_1,
+    snd_player_hit_2,
+    snd_player_hit_3
+];
+
+death_sound = [ // a couple of death sounds
+    snd_player_death_1,
+    snd_player_death_2
 ];
 
 /// @desc Adds a specified amount of money to the player's balance.
@@ -64,29 +70,42 @@ function remove_keys(_count) {
     keys -= _count;
 }
 
-/// @desc Gives the player an amout of XP that is speciefied, when the player reaches the maximum XP gained, they will level up and the amount of XP for the next level will multiplied by 1.5.
+/// @desc Gives the player an amout of XP that is speciefied, when the player reaches the maximum XP gained, they will level up and the amount of XP for the next level will increase by 25 points.
 /// @param _xp The amount of XP to add
 function add_xp(_xp) {
-    xp += _xp;
+    if (lv < 20)
+        xp += _xp;
     
     if (xp >= xp_req) {
         audio_play_sound(snd_level_up, 8, false);
         
         lv++;
         xp -= xp_req;
-        xp_req *= 1.5;
+        xp_req += 25;
         
-        plr_hp_max += 10;
+        plr_hp_max += 50;
         plr_hp = plr_hp_max;
         plr_damage += 2;
         
-        create_dialogue([
-        {
-            dia_chara: "SYSTEM",
-            dia_sound: "system",
-            dia_text: $"LEVEL UP\nYou've just advanced to LV {lv}! HP + DMG up!"
+        if (lv == 20) {
+            create_dialogue([
+            {
+                dia_chara: "SYSTEM",
+                dia_sound: "system",
+                dia_text: $"MAX LEVEL REACHED\nYou've just advanced to LV {lv}! HP + DMG up!"
+            }
+            ])
         }
-        ])
+        else {
+            create_dialogue([
+            {
+                dia_chara: "SYSTEM",
+                dia_sound: "system",
+                dia_text: $"LEVEL UP\nYou've just advanced to LV {lv}! HP + DMG up!"
+            }
+            ])
+        }
+        
     }
     else
         if (_xp >= 1)

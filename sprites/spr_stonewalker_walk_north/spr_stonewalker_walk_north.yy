@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_stonewalker_walk_north",
   "bboxMode":0,
   "bbox_bottom":27,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"31d7dd17-3446-4ad1-bb5c-1d4a6e6a0364","name":"31d7dd17-3446-4ad1-bb5c-1d4a6e6a0364","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3345e0fe-3fed-42a7-8332-a5b854cd25fb","name":"3345e0fe-3fed-42a7-8332-a5b854cd25fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6153adec-fd4d-4a08-98f2-f25f81fae746","name":"6153adec-fd4d-4a08-98f2-f25f81fae746","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"19e32ce4-1dce-4312-865c-1e6259e520ea","name":"19e32ce4-1dce-4312-865c-1e6259e520ea","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a4f20a67-907a-4c75-a570-88b06c20671c","name":"a4f20a67-907a-4c75-a570-88b06c20671c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"526414cd-2863-4820-9008-b7d51cf43c38","name":"526414cd-2863-4820-9008-b7d51cf43c38","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"31d7dd17-3446-4ad1-bb5c-1d4a6e6a0364","name":"31d7dd17-3446-4ad1-bb5c-1d4a6e6a0364","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3345e0fe-3fed-42a7-8332-a5b854cd25fb","name":"3345e0fe-3fed-42a7-8332-a5b854cd25fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6153adec-fd4d-4a08-98f2-f25f81fae746","name":"6153adec-fd4d-4a08-98f2-f25f81fae746","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"19e32ce4-1dce-4312-865c-1e6259e520ea","name":"19e32ce4-1dce-4312-865c-1e6259e520ea","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a4f20a67-907a-4c75-a570-88b06c20671c","name":"a4f20a67-907a-4c75-a570-88b06c20671c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"526414cd-2863-4820-9008-b7d51cf43c38","name":"526414cd-2863-4820-9008-b7d51cf43c38","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -75,24 +75,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"31d7dd17-3446-4ad1-bb5c-1d4a6e6a0364","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f5f0531d-e714-4ced-989b-16507aeff56d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3345e0fe-3fed-42a7-8332-a5b854cd25fb","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"68ecde46-81d2-491f-a539-e2d927df4cd9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6153adec-fd4d-4a08-98f2-f25f81fae746","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1fecb47d-239e-4f60-9e8d-180054f0758d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"19e32ce4-1dce-4312-865c-1e6259e520ea","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"028581d1-287e-4775-8eb8-6280b4b57c51","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a4f20a67-907a-4c75-a570-88b06c20671c","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b842a029-4d01-42a2-a91f-ecf700388b97","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"526414cd-2863-4820-9008-b7d51cf43c38","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b66913d2-af0a-41e9-96d0-59c38c73fda7","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"31d7dd17-3446-4ad1-bb5c-1d4a6e6a0364","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f5f0531d-e714-4ced-989b-16507aeff56d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3345e0fe-3fed-42a7-8332-a5b854cd25fb","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"68ecde46-81d2-491f-a539-e2d927df4cd9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6153adec-fd4d-4a08-98f2-f25f81fae746","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1fecb47d-239e-4f60-9e8d-180054f0758d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"19e32ce4-1dce-4312-865c-1e6259e520ea","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"028581d1-287e-4775-8eb8-6280b4b57c51","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a4f20a67-907a-4c75-a570-88b06c20671c","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b842a029-4d01-42a2-a91f-ecf700388b97","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"526414cd-2863-4820-9008-b7d51cf43c38","path":"sprites/spr_stonewalker_walk_north/spr_stonewalker_walk_north.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b66913d2-af0a-41e9-96d0-59c38c73fda7","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

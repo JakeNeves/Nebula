@@ -6,8 +6,8 @@
   "name":"obj_sign",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPC",
-    "path":"folders/Objects/NPC.yy",
+    "name":"Misc",
+    "path":"folders/Objects/Environment/Misc.yy",
   },
   "parentObjectId":{
     "name":"obj_npc",

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_tree",
   "bboxMode":2,
   "bbox_bottom":75,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"bad503a7-b834-40d2-b451-7b4f4d57d65c","name":"bad503a7-b834-40d2-b451-7b4f4d57d65c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"65bb7f4b-e726-4038-b871-52179678b35a","name":"65bb7f4b-e726-4038-b871-52179678b35a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bad503a7-b834-40d2-b451-7b4f4d57d65c","name":"bad503a7-b834-40d2-b451-7b4f4d57d65c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"65bb7f4b-e726-4038-b871-52179678b35a","name":"65bb7f4b-e726-4038-b871-52179678b35a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -24,7 +24,7 @@
   ],
   "name":"spr_tree",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"Forest",
     "path":"folders/Sprites/Environment/Forest.yy",
@@ -79,8 +79,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":32,
+    "yorigin":40,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

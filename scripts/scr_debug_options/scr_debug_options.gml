@@ -1,12 +1,24 @@
 /// @description Toggles Noclip.
 function noclip() {
 	if (!obj_mainchara.plr_noclip) {
-		show_debug_message("Noclip is enabled");
+		show_debug_message("Noclip is enabled!");
 		obj_mainchara.plr_noclip = true;
 	}
 	else {
-		show_debug_message("Noclip is disabled");
+		show_debug_message("Noclip is disabled!");
 		obj_mainchara.plr_noclip = false;
+	}
+}
+
+/// @description Determines if the player can take damage from any source.
+function godmode() {
+	if (obj_mainchara.can_take_damage) {
+		show_debug_message("God mode is enabled! (Damage will not be taken)");
+		obj_mainchara.can_take_damage = false;
+	}
+	else {
+		show_debug_message("God mode is disabled! (Damage will be taken)");
+		obj_mainchara.can_take_damage = true;
 	}
 }
 
@@ -29,14 +41,14 @@ function set_route(_input) {
 			show_debug_message("You are now on the Neutral route");
 		break;
 		
-		case "failed":
-			global.route_type = ROUTE_TYPE.FAILED_EMPEROR;
-			show_debug_message("You are now on the Failed Emperor route");
+		case "fate":
+			global.route_type = ROUTE_TYPE.FATE;
+			show_debug_message("You are now on the Fate route");
 		break;
 		
 		case "revelation":
 			global.route_type = ROUTE_TYPE.REVELATION;
-			show_debug_message("You are now on the True Revelation route");
+			show_debug_message("You are now on the Revelation route");
 		break;
 		
 		default:

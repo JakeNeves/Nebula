@@ -10,8 +10,8 @@
   "name":"obj_savestate",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPC",
-    "path":"folders/Objects/NPC.yy",
+    "name":"Misc",
+    "path":"folders/Objects/Environment/Misc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,0 +1,1 @@
+chance = random(21);

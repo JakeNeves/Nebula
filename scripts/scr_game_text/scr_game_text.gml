@@ -77,6 +77,15 @@ test_dialogue = [ // all the mario pissing lines :P
     }
 ]
 
+sylux_test_dialogue = [
+    {
+        dia_chara: "Sylux",
+        dia_sound: "sylux",
+        dia_text: "I need to go to the bathroom..."
+    }
+]
+
+/// sylux follower dialogue
 follower_dia_1 = [
     {
         dia_chara: "interact",
@@ -178,39 +187,6 @@ follower_dia_2 = [
     }
 ]
 
-witness_test_dialogue = [ // why did I make a set of test dialogue just for a boss
-    {
-        dia_chara: "witness",
-        dia_sound: "system",
-        dia_text: "I ONLY POO POO FARTED FOR THE GOOD OF HUMANITY"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "lmao"
-    },
-    {
-        dia_chara: "witness",
-        dia_sound: "witness",
-        dia_text: "PEE PEE DOO DOO KA KA"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "He did it folks, he killed the Sylux!"
-    },
-    {
-        dia_chara: "witness",
-        dia_sound: "witness",
-        dia_text: "I AM CURRENTLY MUTATING YOUR DNA AS WE SPEAK"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Welp, guess I shouldn't have eaten that genetically modified corn..."
-    }
-]
-
 dont_move_minigame_intro = [
     {
         dia_chara: "interact",
@@ -234,6 +210,66 @@ dont_move_minigame_intro = [
     }
 ]
 
+/// misc dialogue
+bloodpoke_scenic_river = [
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "Man..."
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "Would you look at this view!"
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "Just seeing the river flowing from up here, is amazing..."
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "I remember coming up here one night with Cynthia,\nher and I really enjoyed this view!"
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "Things haven't changed around here quite a bit!"
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "To this day, the Bloodpoke River looks great from up here..."
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "Even after many years that have passed, and I'm still counting."
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "For now, I should probably get going somewhere,\nGallahard isn't gonna rebuild itself!"
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "Especially since the whole empire is laid to ruin and\nI may end up being the last emperor alive,\nunless the people and I work together to push back that demonic\narmy that ravaged Gallahard!"
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "And in the end, rebuild Gallahard as an empire and\nfor future generations of our people to perserve..."
+    },
+    {
+        dia_chara: "Jake",
+        dia_sound: "jake",
+        dia_text: "Anyways, enough talk, I should get going!"
+    }
+]
+
+/// signs
 wasteland_welcome = [
     {
         dia_chara: "interact",
@@ -263,6 +299,22 @@ wasteland_welcome = [
         dia_chara: "interact",
         dia_sound: "system",
         dia_text: "-Rhomas Van Schvanzerflank, Head of the Basalta Landing"
+    }
+]
+
+fields_directions_1 = [
+    {
+        dia_chara: "interact",
+        dia_sound: "system",
+        dia_text: "WEST - To the Capital\nEAST - To Oridon and Serogarde\nSOUTH - To Bloodpoke Valley"
+    }
+]
+
+bloodpoke_directions_1 = [
+    {
+        dia_chara: "interact",
+        dia_sound: "system",
+        dia_text: "WEST - To Belgarde (Beware of Outlaws!)\nEAST - To Manicouligan\nNORTH - To the Capital, Oridon and Serogarde"
     }
 ]
 
@@ -298,6 +350,7 @@ mines_enterance = [
         dia_text: "-Rhomas Banemhent, Head Exc. Foreman"
     }
 ]
+
 interact_closed_mineshaft = [
     {
         dia_chara: "interact",
@@ -344,6 +397,7 @@ wasteland_hideout = [
     }
 ]
 
+/// cutscenes?
 vortex_defeated = [ // probably gonna be used for an illustrated cutscene
     {
         dia_chara: "interact",
@@ -377,6 +431,7 @@ vortex_defeated = [ // probably gonna be used for an illustrated cutscene
     }
 ]
 
+/// tutorial dialogue
 tutorial_intro = [
     {
         dia_chara: "interact",

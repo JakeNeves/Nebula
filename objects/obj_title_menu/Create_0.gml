@@ -9,12 +9,12 @@ pos = 0;
 option[0, 0] = "New Game";
 option[0, 1] = "Continue";
 option[0, 2] = "Options";
-option[0, 3] = "Accomplishments";
+option[0, 3] = "Play Tutorial";
 option[0, 4] = "Exit Game";
 
-option[1, 0] = "Window Size";
-option[1, 1] = "Key Binds";
-option[1, 2] = "Blood and Gore";
+option[1, 0] = "Toggle Fullscreen";
+option[1, 1] = "Music: ON";
+option[1, 2] = "Blood and Gore: ON";
 option[1, 3] = "Back";
 
 option[2, 0] = "File A";
