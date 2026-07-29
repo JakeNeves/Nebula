@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"Misc",
-    "path":"folders/Sprites/Environment/Misc.yy",
+    "name":"Obstacle",
+    "path":"folders/Sprites/Obstacle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_bullet_switch",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":10,
+  "conversionMode":0,
+  "duration":1.2002268,
+  "exportDir":"",
+  "name":"snd_bullet_switch",
+  "parent":{
+    "name":"Misc",
+    "path":"folders/Sounds/Misc.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bullet_switch.ogg",
+  "volume":1.0,
+}

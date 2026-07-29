@@ -1,3 +1,5 @@
+depth = bbox_top;
+
 image_alpha -= 0.001;
 
 if (image_alpha <= 0)

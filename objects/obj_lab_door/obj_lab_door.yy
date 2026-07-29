@@ -1,10 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_lab_door",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_lab_door",
   "overriddenProperties":[],
@@ -12,7 +9,10 @@
     "name":"Lab",
     "path":"folders/Objects/Environment/Lab.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_door",
+    "path":"objects/obj_door/obj_door.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

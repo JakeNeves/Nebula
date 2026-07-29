@@ -2,10 +2,10 @@
   "$GMSequence":"v1",
   "%Name":"seq_intro",
   "autoRecord":true,
-  "backdropHeight":768,
+  "backdropHeight":240,
   "backdropImageOpacity":0.5,
   "backdropImagePath":"",
-  "backdropWidth":1366,
+  "backdropWidth":320,
   "backdropXOffset":0.0,
   "backdropYOffset":0.0,
   "events":{
@@ -41,7 +41,7 @@
   "tracks":[
     {"$GMAudioTrack":"","%Name":"snd_mus_intro","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<AudioKeyframe>":"","Keyframes":[
           {"$Keyframe<AudioKeyframe>":"","Channels":{
-              "0":{"$AudioKeyframe":"","Id":{"name":"snd_mus_intro","path":"sounds/snd_mus_intro/snd_mus_intro.yy",},"Mode":0,"resourceType":"AudioKeyframe","resourceVersion":"2.0",},
+              "0":{"$AudioKeyframe":"","Id":{"name":"mus_intro","path":"sounds/mus_intro/mus_intro.yy",},"Mode":0,"resourceType":"AudioKeyframe","resourceVersion":"2.0",},
             },"Disabled":false,"id":"8e59f8cf-0390-4c06-b68c-828fc7e44816","IsCreationKey":false,"Key":0.0,"Length":11400.0,"resourceType":"Keyframe<AudioKeyframe>","resourceVersion":"2.0","Stretch":false,},
         ],"resourceType":"KeyframeStore<AudioKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"snd_mus_intro","resourceType":"GMAudioTrack","resourceVersion":"2.0","trackColour":4282930674,"tracks":[
         {"$GMRealTrack":"","%Name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"$KeyframeStore<RealKeyframe>":"","Keyframes":[

@@ -3,9 +3,9 @@
   "%Name":"spr_sylux_walk_south",
   "bboxMode":2,
   "bbox_bottom":40,
-  "bbox_left":0,
-  "bbox_right":20,
-  "bbox_top":20,
+  "bbox_left":5,
+  "bbox_right":15,
+  "bbox_top":37,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -36,7 +36,13 @@
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
     "right":0,
-    "tileMode":[0,0,0,0,0,],
+    "tileMode":[
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
     "top":0,
   },
   "origin":4,
@@ -86,10 +92,18 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c6d304f8-4bf3-4ba2-ab4e-f56c189c50f3","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2093a8ef-505e-410b-aa77-867f017f28c0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fcfd765c-69e0-4a45-98c1-3277f25bf6fe","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5e3f4fd5-fd32-44da-9201-8573a759c9e0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"485ea6a7-69eb-4328-8e50-db6ad5c4ac1c","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b989bf69-ae53-4801-885a-108303aaa25c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"24d7a025-366e-4915-b907-45fb7e80da27","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3cf6278a-bf77-4c65-b57c-b4b4acfeafac","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c6d304f8-4bf3-4ba2-ab4e-f56c189c50f3","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2093a8ef-505e-410b-aa77-867f017f28c0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fcfd765c-69e0-4a45-98c1-3277f25bf6fe","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5e3f4fd5-fd32-44da-9201-8573a759c9e0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"485ea6a7-69eb-4328-8e50-db6ad5c4ac1c","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b989bf69-ae53-4801-885a-108303aaa25c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"24d7a025-366e-4915-b907-45fb7e80da27","path":"sprites/spr_sylux_walk_south/spr_sylux_walk_south.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"3cf6278a-bf77-4c65-b57c-b4b4acfeafac","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

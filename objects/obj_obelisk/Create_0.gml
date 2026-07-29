@@ -1,1 +1,1 @@
-chance = random(21);
+chance = random_range(0, 2);

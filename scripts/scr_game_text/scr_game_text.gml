@@ -1,273 +1,176 @@
+/// @param ID
+function create_dialogue_from_id(_id) {
+    switch (_id) {
+        #region Testing Dialogue
+        case "test1": // Testing dialogue, yes it's the entire dialogue from Mario Pissing!
+            create_dialogue("Time to take a piss...", "jake");
+            create_dialogue("...", "jake");
+            create_dialogue("What the hell are you doing?");
+            create_dialogue("I'm taking a piss!", "jake");
+            create_dialogue("Okay, but why aren't you jumping on me, that's what you're supposed to do.");
+            create_dialogue("I might do it fucking later.", "jake");
+            create_dialogue("No, I'm a motherfucking enemy, you're supposed to jump on me!");
+            create_dialogue("Okey dokey then, let me get my pants again first and them maybe, I'll jump on you.", "jake");
+            create_dialogue("Maybe?");
+            create_dialogue("MAYBE!?");
+            create_dialogue("ARE YOU OUT OF YOUR FUCKING MIND?");
+            create_dialogue("NO!");
+            create_dialogue("JUMP ON ME NOW MOTHERFUCKER!");
+            create_dialogue("Okay, but let me get my pants first...", "jake");
+            create_dialogue("*sigh* Fine!");
+            break;
+        #endregion
+        
+        #region Sylux Follower Dialogue
+        case "follower_1": // Sylux's Escape
+            create_dialogue("For many years, the demon overlord, Sylux...");
+            create_dialogue("He was restrained by a magical force, manifested by the gods...");
+            create_dialogue("This said magical force prevented him from escaping imprisonment, sealing him and his malice for thousands of years...");
+            create_dialogue("One day, the magic restraining him, degraded!");
+            create_dialogue("Sylux later then broke free from his imprisonment, the malice in which he harnesses such potental from grew stronger...");
+            create_dialogue("Stronger than before! With such power, he began to attack both the Heavans...");
+            create_dialogue("And the Underworld, his onslaught would go on to be the most unfortunate events known to man!");
+            break;
+        
+        case "follower_2": // Lafell
+            create_dialogue("Did you know, the demon overlord, Sylux, has a wife!");
+            create_dialogue("Her name is Lafell...");
+            create_dialogue("She posseses immense demonic powers, just like her husband.");
+            create_dialogue("She even has a human disguise, just like Sylux!");
+            create_dialogue("Lafell is also one of Sylux's sentinels, she represents Sylux's influence of torture!");
+            create_dialogue("She runs a personal torture hall in the void...");
+            create_dialogue("Where dammed and unfortunate souls, harvested by her husband are rounded up and sent to her torture hall.");
+            create_dialogue("The torture hall in question, has a near-similar appearence to the Gehenna!");
+            create_dialogue("Many people would sometimes confuse Lawfel's torture hall, with the actual Gehenna, due to it's appearence...");
+            create_dialogue("But the rest, pose such question...");
+            create_dialogue("\"Is Lafell's torture hall, the real Gehenna, or am I confused like no tomorrow?\"");
+            create_dialogue("Who knows? Maybe lord Sylux could tell, or even his wife...");
+            break;
+        #endregion
+        
+        #region Misc. Dialogue
+        case "bloodpoke_scenic_river": // Scenic Spots: Bloodpoke River
+            create_dialogue("Man...", "jake_happy");
+            create_dialogue("Would you look at this view!", "jake_happy");
+            create_dialogue("Just seeing the river flowing from up here, is amazing...", "jake_happy");
+            create_dialogue("I remember coming up here one night with Cynthia, her and I really enjoyed this view!", "jake_happy");
+            create_dialogue("Things haven't changed around here quite a bit!", "jake_happy");
+            create_dialogue("To this day, the Bloodpoke River looks great from up here...", "jake_happy");
+            create_dialogue("Even after many years that have passed, and I'm still counting!", "jake_happy");
+            create_dialogue("For now, I should probably get going somewhere, Gallahard isn't gonna rebuild itself!", "jake");
+            create_dialogue("Especially since the whole empire is laid to ruin and I may end up being the last emperor alive!", "jake");
+            create_dialogue("Unless the people and I work together to push back that demonic army that ravaged Gallahard!", "jake");
+            create_dialogue("And in the end, rebuild Gallahard as an empire and for future generations of our people to perserve...", "jake_happy");
+            create_dialogue("Anyways, enough talk, I should get going!", "jake");
+            break;
+        
+        case "save_prompt":
+            create_dialogue("Save your progress here?");
+            create_dialogue_option("YES", "save")
+            create_dialogue_option("NO", "save_cancel")
+            break;
+        
+        case "save_cancel":
+            create_dialogue("Progress saving canceled!");
+            break;
+        
+        case "save":
+            audio_play_sound(snd_save, 8, false);
+            save_game(global.game_data_file)
+            create_dialogue("Progress has been saved!");
+            break;
+        #endregion
+        
+        #region Sign/Screen Dialogue
+        case "fields_directions_1":
+            create_dialogue("WEST - To the Capital", "sign");
+            create_dialogue("EAST - To Oridon and Serogarde", "sign");
+            create_dialogue("SOUTH - To Bloodpoke Valley", "sign");
+            break;
 
-test_dialogue = [ // all the mario pissing lines :P
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Time to take a piss..."
-    },
-    { 
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "..."
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "What the hell are you doing?"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "I'm taking a piss!."
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "Okay, but why aren't you jumping on me, that's what you're supposed to do."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "I might do it fucking later."
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "No I'm a motherfucking enemy, you're supposed to jump on me."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Okey dokey then, let me get my pants again first and then maybe\nI'll jump on you..."
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "Maybe?"
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "MAYBE!?"
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "Are you out of your fucking mind?"
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "No!"
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "Jump on me now motherfucker!"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Okay but let me get my pants first..."
-    },
-    {
-        dia_chara: "Vortex",
-        dia_sound: "vortex",
-        dia_text: "*sigh* Fine..."
-    }
-]
+        case "bloodpoke_directions_1":
+            create_dialogue("WEST - To Belgarde (Beware of Outlaws!)", "sign");
+            create_dialogue("EAST - To Manicouligan", "sign");
+            create_dialogue("NORTH - To the Capital, Oridon and Serogarde", "sign");
+            break;
+        
+        case "mines_enterance":
+            create_dialogue("Beyond this enterance is an elevator that leads to the mines.", "sign");
+            create_dialogue("For guided tours, check your local community board for information on how to apply.", "sign");
+            create_dialogue("Tourists must be within sight of any nearby tour guides at all cost!", "sign");
+            create_dialogue("We are not responsible for any injuries or damage, caused by tourists!", "sign");
+            create_dialogue("For more information, ask any nearby foreman for help...", "sign");
+            create_dialogue("-Rhomas Banemhent, Head Exc. Foreman", "sign");
+            break;
+        
+        case "lab_safety":
+            create_dialogue("NOTICE TO ALL FACILITY PERSONEL", "screen");
+            create_dialogue("Failiure to comply with any safety protocols and procedures will result in immediate termination!", "screen");
+            create_dialogue("For your safety and the safety of others around you, you are required to partake in all safety and first-aid training once every year.", "screen");
+            create_dialogue("Historically, the Kox Labs facility has had fatal accidents and tragedies before.", "screen");
+            create_dialogue("Especially during the small fire in the research and experimentation sector back in June of 2015!", "screen");
+            create_dialogue("The safety of you and the facility is of the utmost of importance to us.", "screen");
+            create_dialogue("-Dr. Sebastian Kox, Head of the Facility", "screen");
+            break;
+        #endregion
+        
+        #region Interaction Dialogue
+        case "interact_blocked_mineshaft":
+            create_dialogue("The pile of rubble seems to be blocking the path into the mineshaft...");
+            create_dialogue("Upon closer inspection, the rubble appears to be immovable without heavy equippment or blowing it up with dynamite!");
+            break;
+        #endregion
+        
+        #region Tutorial Dialogue
+        case "tutorial_intro":
+            create_dialogue("So, you're new to this game huh?");
+            create_dialogue("Alright, let's get you situated.");
+            create_dialogue("This is Jake!");
+            create_dialogue("He's the Emperor of Gallahard...");
+            create_dialogue("Remember that now!");
+            break;
+        
+        case "tutorial_attack":
+            create_dialogue("Press ATTACK to usr your melee weapon, this will be your friend for getting up close and personal with enemies!");
+            create_dialogue("Press FIRE to use your gun, you will likely be using your issued gun to defend yourself with, even in the toughest situations...");
+            create_dialogue("If you need some point of reference on which button is ATTACK or witch button is FIRE, check out the enclosed instruction manual!");
+            create_dialogue("There, the enclosed instruction manual will help you with suiting yourself...");
+            create_dialogue("Even if you're playing with either a controller or your keyboard, the enclosed instruction manual will give you a brief summary of the game's controls.");
+            break;
 
-sylux_test_dialogue = [
-    {
-        dia_chara: "Sylux",
-        dia_sound: "sylux",
-        dia_text: "I need to go to the bathroom..."
-    }
-]
+        case "tutorial_yellow_paint":
+            create_dialogue("You see that yellow paint there?", "jake");
+            create_dialogue("I wouldn't trust it, it's mostly misleading at times...", "jake_suspicious");
+            create_dialogue("Maybe suggest following the red paint!", "jake_happy");
+            create_dialogue("This seems a little more trustworthy, right?", "jake_happy");
+            create_dialogue("The yellow path takes you somewhere misleading...");
+            create_dialogue("Try taking the red path, like Jake suggested!");
+            break;
 
-/// sylux follower dialogue
-follower_dia_1 = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "For many years, the demon overlord, Sylux..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "He was restrained by a magical force, manifested by the gods..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "This said magical force prevented him from escaping imprisonment\nsealing him and his malice for thousands of years..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "One day, the magic restraining him, gave away!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Sylux later then broke free from imprisonment, the malice in which\nhe harnesses such potental from grew stronger..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Stronger than before!\nWith such power, he began to attack both the Heavans..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "And the Underworld, his onslaught would go on to be the most\nunfortunate events known to man!"
-    }
-]
+        case "yellow_paint":
+            create_dialogue("Well, that lead to nowhere", "jake_unamused");
+            create_dialogue("Now what?", "jake_unamused");
+            create_dialogue("There's nothing interesting around here, maybe you should go back!");
+            create_dialogue("Take the red path at that can lead you somewhere special, trust me...");
+            break;
 
-follower_dia_2 = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Did you know, the demon overlord, Sylux, has a wife!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Her name is Lawfel..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "She posseses immense demonic powers, just like her husband."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "She also has a human disguise, just like Sylux!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Lawfel is also one of Sylux's sentinels, she represents\nSylux's influence of torture!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "She runs a personal torture hall in the void..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Where dammed and unfortunate souls, harvested by her husband\nare rounded up and sent to her torture hall."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "The torture hall in question, has a near-similar appearence to the Gehenna!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Many people would sometimes confuse Lawfel's torture hall,\nwith the actual Gehenna, due to it's appearence..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "But the rest, pose such question...."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "\"Is Lawfel's torture hall, the real Gehenna,\nor am I confused like no tomorrow?\""
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Who knows? Maybe lord Sylux could tell, or even his wife..."
+        case "tutorial_end":
+            create_dialogue("Congratulations!");
+            create_dialogue("Look how far you've gotten!");
+            create_dialogue("I think you may be ready to take on a serious challenge...");
+            create_dialogue("Let's save Gallahard!");
+            create_dialogue("It won't be easy though, you will have to face a bunch of enemies and conquer Gallahard's ongoing phenomenas!");
+            create_dialogue("And if you fail, that's it for Gallahard...");
+            create_dialogue("Unless you come back, stronger than before...");
+            create_dialogue("Good luck now!");
+            break;
+        #endregion
+        
+        default: // Failsafe Dialogue
+            create_dialogue("error");
+            break;
     }
-]
-
-dont_move_minigame_intro = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "For fucks sake..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "When I tell you, \"don't move\", you don't MOVE!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Holy shit..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "I can't believe I have to tell you this, next time\nyou will face serious consiquences!"
-    }
-]
-
-/// misc dialogue
-bloodpoke_scenic_river = [
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Man..."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Would you look at this view!"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Just seeing the river flowing from up here, is amazing..."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "I remember coming up here one night with Cynthia,\nher and I really enjoyed this view!"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Things haven't changed around here quite a bit!"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "To this day, the Bloodpoke River looks great from up here..."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Even after many years that have passed, and I'm still counting."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "For now, I should probably get going somewhere,\nGallahard isn't gonna rebuild itself!"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Especially since the whole empire is laid to ruin and\nI may end up being the last emperor alive,\nunless the people and I work together to push back that demonic\narmy that ravaged Gallahard!"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "And in the end, rebuild Gallahard as an empire and\nfor future generations of our people to perserve..."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Anyways, enough talk, I should get going!"
-    }
-]
+}
 
 /// signs
 wasteland_welcome = [
@@ -299,68 +202,6 @@ wasteland_welcome = [
         dia_chara: "interact",
         dia_sound: "system",
         dia_text: "-Rhomas Van Schvanzerflank, Head of the Basalta Landing"
-    }
-]
-
-fields_directions_1 = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "WEST - To the Capital\nEAST - To Oridon and Serogarde\nSOUTH - To Bloodpoke Valley"
-    }
-]
-
-bloodpoke_directions_1 = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "WEST - To Belgarde (Beware of Outlaws!)\nEAST - To Manicouligan\nNORTH - To the Capital, Oridon and Serogarde"
-    }
-]
-
-mines_enterance = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Beyond this enterance is an elevator that leads to the mines."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "For guided tours, check your local community board\nfor information on how to apply."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Tourists must be within sight of any nearby tour guides at all cost!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "We are not responsible for any injuries or damage, caused by tourists!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "For more information, ask any nearby foreman for help..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "-Rhomas Banemhent, Head Exc. Foreman"
-    }
-]
-
-interact_closed_mineshaft = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "The pile of rubble seems to be blocking the path into the mineshaft..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Upon closer inspection, the rubble appears to be immovable\nwithout using heavy equippment or blowing it up with dynamite!"
     }
 ]
 
@@ -428,151 +269,5 @@ vortex_defeated = [ // probably gonna be used for an illustrated cutscene
         dia_chara: "interact",
         dia_sound: "system",
         dia_text: "And just like that, it was finally over..."
-    }
-]
-
-/// tutorial dialogue
-tutorial_intro = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "So, you're new to this game huh?"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Alright, let's get you situated."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "This is Jake!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "He's the Emperor of Gallahard..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Remember that now!"
-    }
-]
-
-tutorial_attack = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Press ATTACK to use your melee weapon, this will be your friend\ngetting up close and personal with enemies!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Press FIRE to use your gun, you will likely be using your issued\ngun to defend yourself with, even in the toughest situations..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "If you need some point of reference on which button is ATTACK\nor with button is FIRE, check out the enclosed instruction manual!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "There, the enclosed instruction manual will help you with suiting yourself..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Even if you're playing with either a controller or your keyboard,\nthe enclosed instruction manual will give you a brief summary\nof the game's controls."
-    }
-]
-
-tutorial_yellow_paint = [
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "You see that yellow paint there?"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "I wouldn't trust it, is mostly misleading at times..."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Maybe suggest following the red paint!"
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "This seems a little more trustworthy, right?"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "The yellow path takes you to somewhere misleading..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Try taking the red path, like Jake suggested!"
-    }
-]
-
-yellow_paint = [
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Well, that led no nowhere..."
-    },
-    {
-        dia_chara: "Jake",
-        dia_sound: "jake",
-        dia_text: "Now What?"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "There's nothing interesting around here, maybe you should go back!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Take the red path as that can lead you to somewhere special, trust me..."
-    }
-]
-
-tutorial_end = [
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Congratulations!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Look how far you've gotten."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "I think you may be ready to take on a serious challenge..."
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Let's save Gallahard!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "It won't be easy though, you will have to face\na bunch of enemies and conquer Gallahard's ongoing phenomenas!\nAnd if you fail, that is it for Gallahard...\nUnless you come back, stronger than before!"
-    },
-    {
-        dia_chara: "interact",
-        dia_sound: "system",
-        dia_text: "Good luck now!"
     }
 ]

@@ -1,6 +1,8 @@
 randomize();
 
 global.main_font = font_add_sprite(spr_font, 32, true, 1);
+global.cipher_font = font_add_sprite(spr_font_pig_pen_cipher, 32, true, 1);
+global.kremic_font = font_add_sprite(spr_font_kremic, 32, true, 1);
 
 global.game_paused = false;
 

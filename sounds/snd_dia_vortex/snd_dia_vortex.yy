@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.116077,
+  "duration":0.07882086,
   "exportDir":"",
   "name":"snd_dia_vortex",
   "parent":{

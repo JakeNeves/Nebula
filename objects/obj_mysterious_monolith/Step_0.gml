@@ -8,13 +8,8 @@ if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < 12) {
     
     if (_key_interact > 0)
     {
-        create_dialogue([ 
-        { 
-            dia_chara: "interact", 
-            dia_sound: "system",
-            dia_text: $"It's written in some near-indecipherable text,\nyou have no idea what it says..."
-        }
-        ])
+        with (instance_create_depth(x, y, depth, obj_textbox))
+            create_dialogue("It's written in some near-indecipherable text, you have no idea what it says...")
     }
 }
 else {

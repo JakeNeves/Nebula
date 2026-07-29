@@ -1,4 +1,6 @@
-if (instance_exists(obj_textbox))
+depth = -bbox_bottom;
+
+if (instance_exists(obj_pause_manager))
     exit;
 
 var _key_interact = real(keyboard_check_pressed(ord("E")));
@@ -9,12 +11,12 @@ if (_gamepad != undefined) {
     _key_interact = real(gamepad_button_check(_gamepad, gp_face4))
 }
 
-if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < 16) {
+if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < interaction_distance) {
     can_interact = true;
     
     if (_key_interact > 0)
     {
-        create_dialogue(dialogue);
+        create_tbox(dialogue_id);
         
         if (transition_player_to_next_room)
         {

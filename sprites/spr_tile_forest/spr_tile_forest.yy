@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":175,
   "bbox_left":16,
-  "bbox_right":159,
+  "bbox_right":223,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"eeb97fbc-e3f0-431c-b112-4adc1c4f7013","name":"eeb97fbc-e3f0-431c-b112-4adc1c4f7013","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c1470041-771a-41d9-ad2f-abfa34f8c1ab","name":"c1470041-771a-41d9-ad2f-abfa34f8c1ab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":224,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"75c001ca-0eac-49f4-a6b9-1a9e31845dbe","blendMode":0,"displayName":"default","isLocked":false,"name":"75c001ca-0eac-49f4-a6b9-1a9e31845dbe","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"2150eddb-f56a-4f04-b24b-e034ea7bc452","blendMode":0,"displayName":"default","isLocked":false,"name":"2150eddb-f56a-4f04-b24b-e034ea7bc452","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tile_forest",
   "nineSlice":null,
@@ -70,7 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"eeb97fbc-e3f0-431c-b112-4adc1c4f7013","path":"sprites/spr_tile_forest/spr_tile_forest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"355aec86-a244-470a-9477-43fe0e809ac2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1470041-771a-41d9-ad2f-abfa34f8c1ab","path":"sprites/spr_tile_forest/spr_tile_forest.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1546c864-1a07-4796-bd29-ef62cc75e96f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

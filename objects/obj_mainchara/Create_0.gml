@@ -26,7 +26,7 @@ keys_max = 999;
 can_take_damage = true;
 
 regen_rate = 1;
-regen_time_max = 60;
+regen_time_max = 200;
 regen_time = regen_time_max;
 can_regenerate_hp = false;
 
@@ -34,6 +34,8 @@ plr_noclip = false;
 
 fire_delay = 16;
 fire_count = fire_delay;
+
+is_shooting = false;
 
 hit_sound = [ // a variety of hit sounds
     snd_player_hit_1,
@@ -45,6 +47,16 @@ death_sound = [ // a couple of death sounds
     snd_player_death_1,
     snd_player_death_2
 ];
+
+bullet_index = obj_basic_shot;
+bullet_type_max = 3;
+bullet_type = 0;
+
+/// @desc Adds a selected bullet type to the player's ammo stash.
+/// @param _bullet_Type The bullet type to add
+function add_bullet_type(_bullet_type) {
+    array_push(bullet_type, _bullet_type);
+}
 
 /// @desc Adds a specified amount of money to the player's balance.
 /// @param _count The amount of money to add 
@@ -87,24 +99,10 @@ function add_xp(_xp) {
         plr_hp = plr_hp_max;
         plr_damage += 2;
         
-        if (lv == 20) {
-            create_dialogue([
-            {
-                dia_chara: "SYSTEM",
-                dia_sound: "system",
-                dia_text: $"MAX LEVEL REACHED\nYou've just advanced to LV {lv}! HP + DMG up!"
-            }
-            ])
-        }
-        else {
-            create_dialogue([
-            {
-                dia_chara: "SYSTEM",
-                dia_sound: "system",
-                dia_text: $"LEVEL UP\nYou've just advanced to LV {lv}! HP + DMG up!"
-            }
-            ])
-        }
+        if (lv == 20)
+            var _max_level = instance_create_depth(x, y - 16, -999, obj_effect_max_level);
+        else
+            var _level_up = instance_create_depth(x, y - 16, -999, obj_effect_level_up);
         
     }
     else

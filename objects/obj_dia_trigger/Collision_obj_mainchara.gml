@@ -2,7 +2,7 @@ if (instance_exists(obj_textbox))
     exit;
 
 if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < 6) {
-    create_dialogue(dialogue);
+    create_tbox(dialogue);
         
     instance_destroy();
     

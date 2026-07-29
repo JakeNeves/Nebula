@@ -10,6 +10,7 @@ if (room != rm_menu && instance_exists(obj_mainchara)) {
         other.direction = plr_dir;
         // other.x = pos_x;
         // other.y = pos_y;
+        other.bullet_type = bullet;
     
         instance_destroy();
     }

@@ -3,11 +3,11 @@
 #macro WEST 2
 #macro SOUTH 3
 
-#macro FRAMERATE 60
+#macro FRAMERATE 120
 
 #macro DIRECTION round(direction / 90)
 
 #macro INIT_ROOM rm_menu
 
-#macro RES_X 800
-#macro RES_Y 600
+#macro RES_X 640
+#macro RES_Y 480

@@ -3,7 +3,7 @@ if (instance_exists(obj_textbox))
 
 var _key_interact = real(keyboard_check_pressed(ord("E")));
 
-if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < 6) {
+if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < 16) {
     
     if (_key_interact > 0)
     {
@@ -14,12 +14,9 @@ if (instance_exists(obj_mainchara) && distance_to_object(obj_mainchara) < 6) {
         }
         else {
             audio_play_sound(snd_door_attempt_open, 8, false);
-        
-            create_dialogue([{
-                dia_chara: "interact",
-                dia_sound: "system",
-                dia_text: "It's locked, looks like you need to find a key to open it..."
-            }])
+            
+            with (instance_create_depth(x, y, depth, obj_textbox))
+                create_dialogue("It's locked, looke like you need to find a key to open it...")
         }
     }
 }

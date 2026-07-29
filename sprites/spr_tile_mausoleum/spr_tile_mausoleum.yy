@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":111,
   "bbox_left":16,
-  "bbox_right":223,
+  "bbox_right":175,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"c8984fec-f5f4-4402-96a7-049a7cc210bf","name":"c8984fec-f5f4-4402-96a7-049a7cc210bf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c9ca4cbb-8854-4047-8385-7b4917ae5c3b","name":"c9ca4cbb-8854-4047-8385-7b4917ae5c3b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":224,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"e6df99b2-289c-431d-b323-5bb41c8b507b","blendMode":0,"displayName":"default","isLocked":false,"name":"e6df99b2-289c-431d-b323-5bb41c8b507b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"11530791-2326-4a86-ac67-28bf268ee955","blendMode":0,"displayName":"default","isLocked":false,"name":"11530791-2326-4a86-ac67-28bf268ee955","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tile_mausoleum",
   "nineSlice":null,
@@ -70,7 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8984fec-f5f4-4402-96a7-049a7cc210bf","path":"sprites/spr_tile_mausoleum/spr_tile_mausoleum.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"38e31ec1-4b65-47f3-bf00-10151a371423","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c9ca4cbb-8854-4047-8385-7b4917ae5c3b","path":"sprites/spr_tile_mausoleum/spr_tile_mausoleum.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"73e0b286-bc31-44aa-849a-49f75d3a7f41","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

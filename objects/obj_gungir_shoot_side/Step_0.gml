@@ -1,3 +1,5 @@
+depth = -bbox_bottom;
+
 x += 5;
 
 time_left--;

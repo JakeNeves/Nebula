@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_crystal_block_shatter",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":10,
+  "conversionMode":0,
+  "duration":1.7788435,
+  "exportDir":"",
+  "name":"snd_crystal_block_shatter",
+  "parent":{
+    "name":"Obstacle",
+    "path":"folders/Sounds/Obstacle.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_crystal_block_shatter.ogg",
+  "volume":1.0,
+}

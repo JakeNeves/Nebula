@@ -1,7 +1,7 @@
-with (all) {
-    if (!on_ui_layer)
-        depth = -bbox_bottom;
-}
+// with (all) {
+//     if (!on_ui_layer)
+//         depth = -bbox_bottom;
+// }
 
 var _gamepad = global.main_gamepad;
 

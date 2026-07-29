@@ -19,19 +19,20 @@ draw_sprite_stretched_ext(spr_xp_fill, 0, _dx, _dy, _xp, _bary, c_white, 0.6);
 if (lv < 20)
     draw_text_transformed(_dx + _barx / 2, _dy + _bary / 2, $"XP: {xp}/{xp_req} | LV: {lv}", 2, 2, 0);
 else
-    draw_text_transformed(_dx + _barx / 2, _dy + _bary / 2, $"LV: {lv}", 2, 2, 0);
+    draw_text_transformed(_dx + _barx / 2, _dy + _bary / 2, $"LV: {lv}", 1, 1, 0);
 
-var _money = _barx * (money);
-_dy += _bary + 12;
+_dy += _bary + 8;
 draw_sprite_stretched(spr_money_base, 0, _dx, _dy, _barx / 2, _bary);
-draw_text_transformed(_dx + _barx / 3, _dy + _bary / 2.5, $"{money}", 2, 2, 0);
+draw_text_transformed(_dx + _barx / 3, _dy + _bary / 2, $"{money}", 2, 2, 0);
 
 if (keys >= 1) {
-    var _keys = _barx * (keys);
-    _dy += _bary + 12;
-    draw_sprite_stretched(spr_keys_base, 0, _dx, _dy, _barx / 2, _bary); 
-    draw_text_transformed(_dx + _barx / 3, _dy + _bary / 3, $"{keys}", 2, 2, 0);
+    _dy += _bary + 8;
+    draw_sprite_stretched(spr_keys_base, 0, _dx, _dy, _barx / 2, _bary);
+    draw_text_transformed(_dx + _barx / 2, _dy + _bary / 2, $"{keys}", 2, 2, 0);
 }
-  
+
+_dy += _bary + 8;
+draw_sprite(spr_bullet_type, bullet_type, _dx, _dy);
+
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

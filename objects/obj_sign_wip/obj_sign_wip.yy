@@ -13,7 +13,10 @@
     "name":"Misc",
     "path":"folders/Objects/Environment/Misc.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_collidable",
+    "path":"objects/obj_collidable/obj_collidable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +33,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_sign_wip",
     "path":"sprites/spr_sign_wip/spr_sign_wip.yy",

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":10,
   "conversionMode":0,
-  "duration":0.14367346,
+  "duration":0.0,
   "exportDir":"",
   "name":"snd_blood",
   "parent":{

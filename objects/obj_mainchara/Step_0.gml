@@ -1,6 +1,11 @@
 // if (window_get_width() != window_width || window_get_height() != window_height)
 //    display_set_gui_maximize();
 
+depth = -bbox_bottom;
+
+if (instance_exists(obj_pause_manager) || is_keyboard_used_debug_overlay())
+    exit;
+
 var _key_pause = real(keyboard_check_pressed(vk_escape));
 
 if (_key_pause) {
@@ -14,26 +19,30 @@ if (_key_pause) {
 	}
 }
 
-if (instance_exists(obj_pause_manager))
-    exit;
-
 var _plr_x_input = real(keyboard_check(ord("D")) - keyboard_check(ord("A")));
 var _plr_y_input = real(keyboard_check(ord("S")) - keyboard_check(ord("W")));
 var _plr_sprint = keyboard_check(vk_shift)
 
-var _key_attack = real(keyboard_check(ord("C")));
+var _key_attack = real(keyboard_check_pressed(ord("C")));
 var _key_shoot = real(keyboard_check(ord("V")));
+
+var _key_cycle_bullets_up = real(keyboard_check_pressed(ord("R")));
+var _key_cycle_bullets_down = real(keyboard_check_pressed(ord("F")));
 
 /// Controller Support Stuff!
 var _gamepad = global.main_gamepad;
 if (_gamepad != undefined) {
     _key_pause = real(gamepad_button_check(_gamepad, gp_start));
     
-    _plr_x_input = real(gamepad_button_check(_gamepad, gp_padl) - gamepad_button_check(_gamepad, gp_padr));
+    _plr_x_input = real(gamepad_button_check(_gamepad, gp_padr) - gamepad_button_check(_gamepad, gp_padl));
     _plr_y_input = real(gamepad_button_check(_gamepad, gp_padd) - gamepad_button_check(_gamepad, gp_padu));
     _plr_sprint = real(gamepad_button_check(_gamepad, gp_face3));
-    _key_attack = real(gamepad_button_check(_gamepad, gp_shoulderr));
+    
+    _key_attack = real(gamepad_button_check_pressed(_gamepad, gp_shoulderr));
     _key_shoot = real(gamepad_button_check(_gamepad, gp_shoulderrb));
+    
+    _key_cycle_bullets_up = real(gamepad_button_check_pressed(_gamepad, gp_shoulderl));
+    _key_cycle_bullets_down = real(gamepad_button_check_pressed(_gamepad, gp_shoulderlb));
 }
 
 if (plr_hp < plr_hp_max) {
@@ -63,10 +72,10 @@ if (!is_keyboard_used_debug_overlay()) {
     if (plr_noclip)
         move_and_collide(_plr_x_input * plr_speed, _plr_y_input * plr_speed, layer_tilemap_get_id(""), undefined, undefined, undefined, plr_speed, plr_speed);        
     else
-        move_and_collide(_plr_x_input * plr_speed, _plr_y_input * plr_speed, [collidable_map, obj_collidable], undefined, undefined, undefined, plr_speed, plr_speed);
+        move_and_collide(_plr_x_input * plr_speed, _plr_y_input * plr_speed, [collidable_map, obj_collidable, obj_npc], undefined, undefined, undefined, plr_speed, plr_speed);
 }
 
-if (_plr_x_input != 0 || _plr_y_input != 0 && !is_keyboard_used_debug_overlay()) {
+if (_plr_x_input != 0 || _plr_y_input != 0) {
     if (_plr_y_input > 0) {
         if (_plr_sprint)
             sprite_index = spr_mainchara_run_south;
@@ -119,17 +128,50 @@ if (_key_attack && !instance_exists(obj_mainchara_melee) && !is_keyboard_used_de
 }
 
 if (_key_shoot  && !is_keyboard_used_debug_overlay()) {
+    is_shooting = true;
     if (fire_count < fire_delay)
         fire_count++;
     else {
         fire_count = 0;
         audio_play_sound(snd_gun_fire, 8, false);
-        var _shoot_inst = instance_create_depth(x, y, depth, obj_mainchara_bullet);
+        var _shoot_inst = instance_create_depth(x, y, depth, bullet_index);
     
         _shoot_inst.image_angle = plr_direction;
-        _shoot_inst.direction = plr_direction;
+        _shoot_inst.direction = plr_direction
         _shoot_inst.damage *= plr_damage;
     }
 }
-else
+else {
+    is_shooting = false;
     fire_count = fire_delay;
+}
+
+if (_key_cycle_bullets_up) {
+    audio_play_sound(snd_bullet_switch, 8, false);
+    bullet_type++;
+}
+if (_key_cycle_bullets_down) {
+    audio_play_sound(snd_bullet_switch, 8, false);
+    bullet_type--;
+}
+
+// Hey look, crude coding!
+if (bullet_type < 0)
+    bullet_type = bullet_type_max;
+if (bullet_type > bullet_type_max)
+    bullet_type = 0;
+
+switch (bullet_type) {
+    case 0:
+        bullet_index = obj_basic_shot;
+        break;
+    case 1:
+        bullet_index = obj_delay_shot;
+        break;
+    case 2:
+        bullet_index = obj_ag_shot;
+        break;
+    case 3:
+        bullet_index = obj_piercing_shot;
+        break;
+}

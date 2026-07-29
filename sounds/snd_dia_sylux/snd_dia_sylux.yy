@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.107143,
+  "duration":0.059591837,
   "exportDir":"",
   "name":"snd_dia_sylux",
   "parent":{

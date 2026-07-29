@@ -28,7 +28,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"dialogue","filters":[],"listItems":[],"multiselect":false,"name":"dialogue","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"interaction_distance","filters":[],"listItems":[],"multiselect":false,"name":"interaction_distance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"16","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"dialogue_id","filters":[],"listItems":[],"multiselect":false,"name":"dialogue_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varDescription":"Gets the game's built-in dialogue ID.\r\nBy default, the dialogue will always result in \"error\" being written if the ID specified either doesn't exist, no ID is specified or the specified ID is broken.","varFriendlyName":"Dialogue ID","varType":2,},
     {"$GMObjectProperty":"v2","%Name":"room_id","filters":[],"listItems":[],"multiselect":false,"name":"room_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"transition_player_to_next_room","filters":[],"listItems":[],"multiselect":false,"name":"transition_player_to_next_room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"event_id","filters":[
@@ -38,7 +39,7 @@
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":null,
   "spriteMaskId":null,
   "visible":true,

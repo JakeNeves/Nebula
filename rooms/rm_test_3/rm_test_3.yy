@@ -161,9 +161,9 @@
     {"$GMRTileLayer":"","%Name":"Mausoleum","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Mausoleum","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":38,"SerialiseWidth":50,"TileCompressedData":[
           -669,0,-12,44,-38,0,-12,44,-38,0,-12,58,-38,0,1,1,-10,2,1,3,-38,0,1,15,-10,16,1,17,-38,0,1,15,-10,16,
           1,17,-38,0,1,15,-10,16,1,17,-38,0,1,15,-10,16,1,17,-38,0,1,15,-10,16,1,17,-38,0,1,29,-10,30,1,31,-42,
-          0,4,20,21,20,21,-46,0,4,21,20,21,20,-46,0,4,20,21,20,21,-42,0,-3,44,6,45,21,20,21,20,43,-3,44,-38,0,
-          -3,44,6,45,20,21,20,21,43,-3,44,-38,0,-3,58,6,59,21,20,21,20,57,-3,58,-38,0,-12,2,-38,0,-12,16,-38,0,
-          -12,30,-319,0,
+          0,4,7,8,8,9,-46,0,4,21,22,22,23,-46,0,4,21,22,22,23,-42,0,-3,44,6,45,21,22,22,23,43,-3,44,-38,0,-3,44,
+          6,45,21,22,22,23,43,-3,44,-38,0,-3,58,6,59,35,36,36,37,57,-3,58,-38,0,-12,2,-38,0,-12,16,-38,0,-12,30,
+          -319,0,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tset_palace","path":"tilesets/tset_palace/tset_palace.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":0.0,"animationSpeedType":0,"colour":4278190080,"depth":300,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":true,"userdefinedAnimFPS":true,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
@@ -190,7 +190,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":999,"hport":600,"hspeed":-1,"hview":300,"inherit":false,"objectId":null,"vborder":999,"visible":true,"vspeed":-1,"wport":800,"wview":400,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":999,"hport":480,"hspeed":-1,"hview":240,"inherit":false,"objectId":null,"vborder":999,"visible":true,"vspeed":-1,"wport":640,"wview":320,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

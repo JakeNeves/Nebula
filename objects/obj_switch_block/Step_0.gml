@@ -1,3 +1,5 @@
+depth = -bbox_bottom;
+
 if (inverted) {
     obj_collidable.solid = false;
     image_index = 0;

@@ -7,8 +7,9 @@ if (room != rm_menu && instance_exists(obj_mainchara)) {
         stat_hp: plr_hp,
         stat_hp_max: plr_hp_max,
         stat_money: money,
-        plr_dir: direction
+        plr_dir: direction,
         // pos_x: x,
         // pos_y: y,
+        bullet: bullet_type
     });
 }

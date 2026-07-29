@@ -4,7 +4,9 @@
   "eventList":[],
   "managed":true,
   "name":"obj_dialogue_interactable",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"interaction_distance","path":"objects/obj_npc/obj_npc.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+  ],
   "parent":{
     "name":"Test",
     "path":"folders/Objects/Test.yy",

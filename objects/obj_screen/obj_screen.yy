@@ -4,12 +4,17 @@
   "eventList":[],
   "managed":true,
   "name":"obj_screen",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"propertyId":{"name":"interaction_distance","path":"objects/obj_npc/obj_npc.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+  ],
   "parent":{
     "name":"Lab",
     "path":"folders/Objects/Environment/Lab.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_npc",
+    "path":"objects/obj_npc/obj_npc.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
